@@ -1,5 +1,5 @@
 ---
-const { title, description } = Astro.props;
+// No front matter needed
 ---
 
 <!DOCTYPE html>
@@ -7,10 +7,10 @@ const { title, description } = Astro.props;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{title} — RugbyClaw Documentation</title>
-    <meta name="description" content={description}>
+    <title>Privacy Policy — RugbyClaw</title>
+    <meta name="description" content="RugbyClaw Privacy Policy - How we handle your data">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href={`https://rugbyclaw.com${Astro.url.pathname}`}>
+    <link rel="canonical" href="https://rugbyclaw.com/privacy">
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/favicon.png">
@@ -19,7 +19,6 @@ const { title, description } = Astro.props;
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     
     <!-- Styles -->
     <link rel="stylesheet" href="/style.css">
@@ -54,42 +53,62 @@ const { title, description } = Astro.props;
     </nav>
 
     <div class="docs-container">
-        <!-- Sidebar -->
-        <aside class="docs-sidebar">
-            <nav aria-label="Documentation navigation">
-                <div class="sidebar-section">
-                    <h3>Getting Started</h3>
-                    <a href="/docs/">Overview</a>
-                    <a href="/docs/installation/">Installation</a>
-                    <a href="/docs/quickstart/">Quick Start</a>
-                </div>
-                <div class="sidebar-section">
-                    <h3>Commands</h3>
-                    <a href="/docs/commands/scores/">Scores</a>
-                    <a href="/docs/commands/fixtures/">Fixtures</a>
-                    <a href="/docs/commands/results/">Results</a>
-                    <a href="/docs/commands/team/">Team</a>
-                    <a href="/docs/commands/standings/">Standings</a>
-                    <a href="/docs/commands/calendar/">Calendar</a>
-                </div>
-                <div class="sidebar-section">
-                    <h3>Configuration</h3>
-                    <a href="/docs/config/">Setup</a>
-                    <a href="/docs/api-key/">API Key</a>
-                </div>
-                <div class="sidebar-section">
-                    <h3>Reference</h3>
-                    <a href="/docs/leagues/">Leagues</a>
-                    <a href="/docs/troubleshooting/">Troubleshooting</a>
-                </div>
-            </nav>
-        </aside>
-
-        <!-- Main Content -->
-        <main class="docs-content">
+        <main class="docs-content" style="max-width: 800px; margin: 0 auto;">
             <article class="prose">
-                <h1>{title}</h1>
-                <slot />
+                <h1>Privacy Policy</h1>
+                <p><em>Last updated: February 2, 2026</em></p>
+
+                <h2>Overview</h2>
+                <p>RugbyClaw is a free, open-source command-line tool. This privacy policy explains how we handle data when you use RugbyClaw.</p>
+
+                <h2>What We Collect</h2>
+                <p><strong>Nothing.</strong> RugbyClaw runs entirely on your local machine. We do not collect, store, or transmit any personal information.</p>
+
+                <h2>Third-Party Services</h2>
+                <h3>API-Sports Rugby API</h3>
+                <p>RugbyClaw fetches rugby match data from the API-Sports Rugby API. When you use RugbyClaw:</p>
+                <ul>
+                    <li>Your API requests are sent directly to API-Sports servers</li>
+                    <li>API-Sports may log your IP address and request metadata according to their privacy policy</li>
+                    <li>We do not have access to this information</li>
+                </ul>
+                <p>Review API-Sports' privacy policy at: <a href="https://api-sports.io" target="_blank" rel="noopener">https://api-sports.io</a></p>
+
+                <h3>Proxy Mode</h3>
+                <p>When using proxy mode (default), your requests are routed through our proxy server to provide free access:</p>
+                <ul>
+                    <li>We log request counts to enforce rate limits (50 requests/day)</li>
+                    <li>We do <strong>not</strong> log the content of requests or responses</li>
+                    <li>We do <strong>not</strong> log personal information</li>
+                    <li>We do <strong>not</strong> share data with third parties</li>
+                </ul>
+
+                <h2>Configuration File</h2>
+                <p>RugbyClaw stores your configuration locally at <code>~/.config/rugbyclaw/config.json</code>. This file may contain:</p>
+                <ul>
+                    <li>Your API key (if configured)</li>
+                    <li>Your favorite leagues</li>
+                    <li>Your timezone preference</li>
+                    <li>Your favorite team</li>
+                </ul>
+                <p>This file never leaves your machine unless you explicitly share it.</p>
+
+                <h2>Analytics</h2>
+                <p>This website (rugbyclaw.com) does not use analytics or tracking cookies.</p>
+
+                <h2>Open Source</h2>
+                <p>RugbyClaw is open source. You can review the complete source code at:</p>
+                <p><a href="https://github.com/pocarles/rugbyclaw" target="_blank" rel="noopener">https://github.com/pocarles/rugbyclaw</a></p>
+
+                <h2>Changes to This Policy</h2>
+                <p>We may update this privacy policy from time to time. Changes will be posted on this page with an updated revision date.</p>
+
+                <h2>Contact</h2>
+                <p>Questions about this privacy policy? Contact Pierre-Olivier Carles:</p>
+                <ul>
+                    <li>Twitter: <a href="https://x.com/pocarles" target="_blank" rel="noopener">@pocarles</a></li>
+                    <li>GitHub: <a href="https://github.com/pocarles/rugbyclaw/issues" target="_blank" rel="noopener">File an issue</a></li>
+                </ul>
             </article>
         </main>
     </div>
