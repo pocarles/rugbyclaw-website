@@ -85,6 +85,21 @@ code {
     border-radius: 6px;
 }
 
+.logo-image {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+    vertical-align: middle;
+    object-fit: contain;
+}
+
+.logo-image.small {
+    width: 24px;
+    height: 24px;
+    margin-right: 6px;
+}
+
 /* Navigation */
 .nav {
     position: fixed;
