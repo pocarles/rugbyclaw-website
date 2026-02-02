@@ -1,3 +1,7 @@
+---
+// No front matter needed for static HTML conversion
+---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,7 +47,7 @@
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     
     <!-- Styles -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
     
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
@@ -53,10 +57,10 @@
         "name": "RugbyClaw",
         "applicationCategory": "DeveloperApplication",
         "operatingSystem": "macOS, Linux, Windows",
-        "description": "Command-line tool to track live rugby scores, fixtures, and results for 13+ leagues including Top 14, Premiership, Six Nations, and Champions Cup.",
+        "description": "Command-line tool to track live rugby scores, fixtures, and results for 13+ leagues including Top 14, Premiership, Six Nations, and Champions Cup. Works out of the box with no configuration required.",
         "url": "https://rugbyclaw.com",
         "downloadUrl": "https://www.npmjs.com/package/rugbyclaw",
-        "softwareVersion": "0.1.0",
+        "softwareVersion": "2.0.0",
         "author": {
             "@type": "Person",
             "name": "Pierre-Olivier Carles",
@@ -73,12 +77,15 @@
             "ratingCount": "1"
         },
         "featureList": [
+            "Works out of the box",
             "Live rugby scores",
             "Match fixtures and results",
             "Team tracking",
             "Calendar export (ICS)",
             "13+ leagues supported",
-            "OpenClaw AI integration"
+            "OpenClaw AI integration",
+            "Proxy mode (50 req/day)",
+            "Direct mode (unlimited)"
         ],
         "screenshot": "https://rugbyclaw.com/screenshot.png",
         "isAccessibleForFree": true,
@@ -113,7 +120,7 @@
                 "name": "How do I install RugbyClaw?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Install RugbyClaw globally via npm with: npm install -g rugbyclaw. Then run 'rugbyclaw config' to set up your leagues, teams, and API key. For OpenClaw integration, also run 'openclaw skill add rugbyclaw'."
+                    "text": "Install RugbyClaw globally via npm with: npm install -g rugbyclaw. It works immediately after install with no configuration required. Default leagues include Top 14, Premiership, URC, Champions Cup, and Six Nations. For OpenClaw AI integration, run 'openclaw skill add rugbyclaw'."
                 }
             },
             {
@@ -121,7 +128,7 @@
                 "name": "Is RugbyClaw free?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yes, RugbyClaw is completely free and open source under the MIT license. It uses the free TheSportsDB API for rugby data."
+                    "text": "Yes, RugbyClaw is completely free and open source under the MIT license. It includes 50 free requests per day via proxy mode. For unlimited requests, add your own free API key from API-Sports."
                 }
             }
         ]
@@ -162,8 +169,8 @@
             <div class="hero-badge">Open Source CLI Tool</div>
             <h1>Rugby scores<br>in your terminal.</h1>
             <p class="hero-subtitle">
-                Track live scores, fixtures, and results for Top 14, Premiership, Six Nations, 
-                and 10+ more competitions. Works standalone or with your AI assistant.
+                Works out of the box — no setup required. Track live scores, fixtures, and results for Top 14, Premiership, Six Nations, 
+                and 10+ more competitions. Standalone CLI or AI assistant integration.
             </p>
             <div class="hero-cta">
                 <div class="install-command">
@@ -376,6 +383,7 @@
     <section id="install" class="install" aria-labelledby="install-heading">
         <div class="section-header">
             <h2 id="install-heading">Get started in 30 seconds</h2>
+            <p>Works immediately after install — no configuration required</p>
         </div>
         <div class="install-grid">
             <div class="install-card">
@@ -388,20 +396,21 @@
             </div>
             <div class="install-card">
                 <div class="install-step" aria-hidden="true">2</div>
-                <h3>Run the setup</h3>
-                <div class="code-block">
-                    <code>rugbyclaw config</code>
-                    <button class="copy-btn" onclick="copyCode(this)" aria-label="Copy command">Copy</button>
-                </div>
-                <p class="install-note">Pick leagues, teams, add a free API key from <a href="https://www.thesportsdb.com/free_sports_api" rel="noopener" target="_blank">TheSportsDB</a></p>
-            </div>
-            <div class="install-card">
-                <div class="install-step" aria-hidden="true">3</div>
-                <h3>Check scores</h3>
+                <h3>Start using it</h3>
                 <div class="code-block">
                     <code>rugbyclaw scores</code>
                     <button class="copy-btn" onclick="copyCode(this)" aria-label="Copy command">Copy</button>
                 </div>
+                <p class="install-note">Default leagues: Top 14, Premiership, URC, Champions Cup, Six Nations</p>
+            </div>
+            <div class="install-card">
+                <div class="install-step" aria-hidden="true">Optional</div>
+                <h3>Customize (optional)</h3>
+                <div class="code-block">
+                    <code>rugbyclaw config</code>
+                    <button class="copy-btn" onclick="copyCode(this)" aria-label="Copy command">Copy</button>
+                </div>
+                <p class="install-note">Add your own <a href="https://api-sports.io" rel="noopener" target="_blank">API key</a> for unlimited requests & custom leagues</p>
             </div>
         </div>
     </section>
@@ -459,7 +468,7 @@
                 <a href="https://github.com/pocarles/rugbyclaw" rel="noopener">GitHub</a>
                 <a href="https://www.npmjs.com/package/rugbyclaw" rel="noopener">npm</a>
                 <a href="https://x.com/pocarles" rel="noopener">Twitter</a>
-                <a href="https://www.thesportsdb.com" rel="noopener">Contact: hello@rugbyclaw.com</a>
+                <a href="https://api-sports.io" rel="noopener">Data: API-Sports</a>
             </nav>
             <p class="footer-credit">Built by <a href="https://pocarles.com" rel="author">Pierre-Olivier Carles</a></p>
         </div>
