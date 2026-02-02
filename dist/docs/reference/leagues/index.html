@@ -1,0 +1,88 @@
+<!DOCTYPE html><meta charset="utf-8"><h1 id="supported-leagues">Supported Leagues</h1>
+<blockquote>
+<p>8 rugby competitions supported by RugbyClaw</p>
+</blockquote>
+<h2 id="club-competitions">Club Competitions</h2>
+<h3 id="top-14-france">Top 14 (France)</h3>
+<ul>
+<li><strong>Slug:</strong> <code>top14</code></li>
+<li><strong>Teams:</strong> 14</li>
+<li><strong>Season:</strong> September - June</li>
+<li><strong>Format:</strong> Regular season + playoffs</li>
+</ul>
+<h3 id="premiership-rugby-england">Premiership Rugby (England)</h3>
+<ul>
+<li><strong>Slug:</strong> <code>premiership</code></li>
+<li><strong>Teams:</strong> 10</li>
+<li><strong>Season:</strong> September - June</li>
+<li><strong>Format:</strong> Regular season + playoffs</li>
+</ul>
+<h3 id="united-rugby-championship-urc">United Rugby Championship (URC)</h3>
+<ul>
+<li><strong>Slug:</strong> <code>urc</code></li>
+<li><strong>Teams:</strong> 16 (Ireland, Scotland, Wales, Italy, South Africa)</li>
+<li><strong>Season:</strong> September - June</li>
+<li><strong>Format:</strong> Multi-nation league</li>
+</ul>
+<h3 id="pro-d2-france">Pro D2 (France)</h3>
+<ul>
+<li><strong>Slug:</strong> <code>pro_d2</code></li>
+<li><strong>Teams:</strong> 16</li>
+<li><strong>Season:</strong> August - June</li>
+<li><strong>Format:</strong> Second division of French rugby</li>
+</ul>
+<h3 id="super-rugby-pacific">Super Rugby Pacific</h3>
+<ul>
+<li><strong>Slug:</strong> <code>super_rugby</code></li>
+<li><strong>Teams:</strong> 12 (Australia, New Zealand, Pacific Islands)</li>
+<li><strong>Season:</strong> February - July</li>
+<li><strong>Format:</strong> Southern Hemisphere competition</li>
+</ul>
+<h2 id="european-competitions">European Competitions</h2>
+<h3 id="european-rugby-champions-cup">European Rugby Champions Cup</h3>
+<ul>
+<li><strong>Slug:</strong> <code>champions_cup</code></li>
+<li><strong>Teams:</strong> 24</li>
+<li><strong>Season:</strong> December - May</li>
+<li><strong>Format:</strong> Top European club competition</li>
+</ul>
+<h3 id="european-rugby-challenge-cup">European Rugby Challenge Cup</h3>
+<ul>
+<li><strong>Slug:</strong> <code>challenge_cup</code></li>
+<li><strong>Teams:</strong> 18</li>
+<li><strong>Season:</strong> December - May</li>
+<li><strong>Format:</strong> Secondary European competition</li>
+</ul>
+<h2 id="international">International</h2>
+<h3 id="six-nations">Six Nations</h3>
+<ul>
+<li><strong>Slug:</strong> <code>six_nations</code></li>
+<li><strong>Teams:</strong> 6 (England, France, Ireland, Italy, Scotland, Wales)</li>
+<li><strong>Season:</strong> February - March</li>
+<li><strong>Format:</strong> Annual international tournament</li>
+</ul>
+<h2 id="usage">Usage</h2>
+<p>Use league slugs in commands:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#6A737D"># View Top 14 fixtures</span></span>
+<span class="line"><span style="color:#B392F0">rugbyclaw</span><span style="color:#9ECBFF"> fixtures</span><span style="color:#9ECBFF"> top14</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># Recent Champions Cup results</span></span>
+<span class="line"><span style="color:#B392F0">rugbyclaw</span><span style="color:#9ECBFF"> results</span><span style="color:#9ECBFF"> champions_cup</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># Six Nations fixtures</span></span>
+<span class="line"><span style="color:#B392F0">rugbyclaw</span><span style="color:#9ECBFF"> fixtures</span><span style="color:#9ECBFF"> six_nations</span></span></code></pre>
+<h2 id="adding-leagues-to-config">Adding Leagues to Config</h2>
+<p>During <code>rugbyclaw config</code>, you can select which leagues to follow. Only selected leagues appear in:</p>
+<ul>
+<li><code>rugbyclaw scores</code></li>
+<li><code>rugbyclaw fixtures</code> (without league argument)</li>
+<li><code>rugbyclaw results</code> (without league argument)</li>
+</ul>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>All times shown in your configured timezone</li>
+<li>Data powered by API-Sports Rugby API</li>
+<li>Coverage: Rugby Union only (no Rugby League)</li>
+</ul>
+<hr>
+<p><em>Last updated: 2026-02-02</em></p>

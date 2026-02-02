@@ -1,0 +1,73 @@
+<!DOCTYPE html><meta charset="utf-8"><h1 id="rugbyclaw-team">rugbyclaw team</h1>
+<blockquote>
+<p>Query specific teams - search, next match, last result</p>
+</blockquote>
+<h2 id="commands">Commands</h2>
+<h3 id="rugbyclaw-team-search">rugbyclaw team search</h3>
+<p>Find a team by name.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">rugbyclaw</span><span style="color:#9ECBFF"> team</span><span style="color:#9ECBFF"> search</span><span style="color:#F97583"> &#x3C;</span><span style="color:#9ECBFF">quer</span><span style="color:#E1E4E8">y</span><span style="color:#F97583">></span></span></code></pre>
+<p><strong>Example:</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">rugbyclaw</span><span style="color:#9ECBFF"> team</span><span style="color:#9ECBFF"> search</span><span style="color:#9ECBFF"> toulouse</span></span></code></pre>
+<p><strong>Output:</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>Found teams matching "toulouse":</span></span>
+<span class="line"><span>  - Stade Toulousain (ID: 107)</span></span>
+<span class="line"><span>  - Toulouse Olympique (ID: 892)</span></span></code></pre>
+<h3 id="rugbyclaw-team-next">rugbyclaw team next</h3>
+<p>Show team’s next match.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">rugbyclaw</span><span style="color:#9ECBFF"> team</span><span style="color:#9ECBFF"> next</span><span style="color:#F97583"> &#x3C;</span><span style="color:#9ECBFF">nam</span><span style="color:#E1E4E8">e</span><span style="color:#F97583">></span></span></code></pre>
+<p><strong>Example:</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">rugbyclaw</span><span style="color:#9ECBFF"> team</span><span style="color:#9ECBFF"> next</span><span style="color:#9ECBFF"> toulouse</span></span></code></pre>
+<p><strong>Output:</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>Stade Toulousain - Next Match</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Sat, Feb 15, 2026 at 15:00</span></span>
+<span class="line"><span>Stade Toulousain vs Stade Français Paris</span></span>
+<span class="line"><span>Competition: Top 14</span></span>
+<span class="line"><span>Venue: Stade Ernest-Wallon, Toulouse</span></span></code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li><code>--ics</code> - Export match to calendar file</li>
+</ul>
+<h3 id="rugbyclaw-team-last">rugbyclaw team last</h3>
+<p>Show team’s last result.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">rugbyclaw</span><span style="color:#9ECBFF"> team</span><span style="color:#9ECBFF"> last</span><span style="color:#F97583"> &#x3C;</span><span style="color:#9ECBFF">nam</span><span style="color:#E1E4E8">e</span><span style="color:#F97583">></span></span></code></pre>
+<p><strong>Example:</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">rugbyclaw</span><span style="color:#9ECBFF"> team</span><span style="color:#9ECBFF"> last</span><span style="color:#9ECBFF"> toulouse</span></span></code></pre>
+<p><strong>Output:</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>Stade Toulousain - Last Result</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Sat, Feb 8, 2026</span></span>
+<span class="line"><span>Stade Toulousain 38 - 12 Racing 92</span></span>
+<span class="line"><span>Competition: Top 14</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Match Summary:</span></span>
+<span class="line"><span>Absolute clinic. Toulouse dominated every aspect of the game.</span></span>
+<span class="line"><span>Dupont orchestrated a masterclass, Ntamack finished brilliantly.</span></span>
+<span class="line"><span>Racing never looked like competing.</span></span></code></pre>
+<h2 id="tips">Tips</h2>
+<ul>
+<li>Use partial names: <code>toulouse</code> matches <code>Stade Toulousain</code></li>
+<li>Search first if unsure of exact name</li>
+<li>Add <code>--ics</code> to next matches to sync to calendar</li>
+<li>Team names are case-insensitive</li>
+</ul>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p><strong>“No team found”?</strong></p>
+<ul>
+<li>Try <code>rugbyclaw team search &#x3C;query></code> first</li>
+<li>Use partial name (e.g., “toulouse” not “Stade Toulousain”)</li>
+<li>Check spelling</li>
+</ul>
+<p><strong>Wrong team showing up?</strong></p>
+<ul>
+<li>Be more specific in your query</li>
+<li>Use the team ID: <code>rugbyclaw team next 107</code></li>
+</ul>
+<h2 id="related-commands">Related Commands</h2>
+<ul>
+<li><a href="./fixtures.md">fixtures</a> - View all upcoming matches</li>
+<li><a href="./results.md">results</a> - View recent results</li>
+<li><a href="./calendar.md">calendar</a> - Export to calendar</li>
+</ul>
+<hr>
+<p><em>Last updated: 2026-02-02</em></p>

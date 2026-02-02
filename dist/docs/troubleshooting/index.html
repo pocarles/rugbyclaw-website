@@ -1,0 +1,156 @@
+<!DOCTYPE html><meta charset="utf-8"><h1 id="troubleshooting">Troubleshooting</h1>
+<blockquote>
+<p>Common problems and solutions</p>
+</blockquote>
+<h2 id="installation-issues">Installation Issues</h2>
+<h3 id="command-not-found-rugbyclaw">”command not found: rugbyclaw”</h3>
+<p><strong>Problem:</strong> RugbyClaw not in PATH after <code>npm install -g</code></p>
+<p><strong>Solution:</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#6A737D"># Check npm global bin directory</span></span>
+<span class="line"><span style="color:#B392F0">npm</span><span style="color:#9ECBFF"> config</span><span style="color:#9ECBFF"> get</span><span style="color:#9ECBFF"> prefix</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># Add to PATH in ~/.bashrc or ~/.zshrc</span></span>
+<span class="line"><span style="color:#F97583">export</span><span style="color:#E1E4E8"> PATH</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"</span><span style="color:#E1E4E8">$PATH</span><span style="color:#9ECBFF">:$(</span><span style="color:#B392F0">npm</span><span style="color:#9ECBFF"> config get prefix)/bin"</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># Reload shell</span></span>
+<span class="line"><span style="color:#79B8FF">source</span><span style="color:#9ECBFF"> ~/.bashrc</span><span style="color:#6A737D">  # or ~/.zshrc</span></span></code></pre>
+<h3 id="npm-install-fails">npm install fails</h3>
+<p><strong>Problem:</strong> Permission errors during global install</p>
+<p><strong>Solution:</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#6A737D"># Option 1: Use sudo (not recommended)</span></span>
+<span class="line"><span style="color:#B392F0">sudo</span><span style="color:#9ECBFF"> npm</span><span style="color:#9ECBFF"> install</span><span style="color:#79B8FF"> -g</span><span style="color:#9ECBFF"> rugbyclaw</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># Option 2: Fix npm permissions (recommended)</span></span>
+<span class="line"><span style="color:#B392F0">mkdir</span><span style="color:#9ECBFF"> ~/.npm-global</span></span>
+<span class="line"><span style="color:#B392F0">npm</span><span style="color:#9ECBFF"> config</span><span style="color:#9ECBFF"> set</span><span style="color:#9ECBFF"> prefix</span><span style="color:#9ECBFF"> '~/.npm-global'</span></span>
+<span class="line"><span style="color:#F97583">export</span><span style="color:#E1E4E8"> PATH</span><span style="color:#F97583">=~</span><span style="color:#E1E4E8">/.npm-global/bin:$PATH</span></span>
+<span class="line"><span style="color:#B392F0">npm</span><span style="color:#9ECBFF"> install</span><span style="color:#79B8FF"> -g</span><span style="color:#9ECBFF"> rugbyclaw</span></span></code></pre>
+<h2 id="configuration-issues">Configuration Issues</h2>
+<h3 id="not-configured-error">”Not configured” error</h3>
+<p><strong>Problem:</strong> Running commands before setup</p>
+<p><strong>Solution:</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">rugbyclaw</span><span style="color:#9ECBFF"> config</span></span></code></pre>
+<p>Follow the wizard to configure API key and preferences.</p>
+<h3 id="invalid-api-key-error">”Invalid API key” error</h3>
+<p><strong>Problem:</strong> API key incorrect or expired</p>
+<p><strong>Solution:</strong></p>
+<ol>
+<li>Get new key from <a href="https://api-sports.io">api-sports.io</a></li>
+<li>Run <code>rugbyclaw config</code> again</li>
+<li>Enter the new key</li>
+</ol>
+<h3 id="cant-find-config-file">Can’t find config file</h3>
+<p><strong>Location:</strong> <code>~/.config/rugbyclaw/config.json</code></p>
+<p><strong>To reset:</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">rm</span><span style="color:#9ECBFF"> ~/.config/rugbyclaw/config.json</span></span>
+<span class="line"><span style="color:#B392F0">rugbyclaw</span><span style="color:#9ECBFF"> config</span></span></code></pre>
+<h2 id="api-errors">API Errors</h2>
+<h3 id="rate-limit-exceeded">”Rate limit exceeded”</h3>
+<p><strong>Problem:</strong> Exceeded free tier limit (100 requests/day)</p>
+<p><strong>Solutions:</strong></p>
+<ul>
+<li>Wait until tomorrow (resets daily)</li>
+<li>Upgrade to paid plan at api-sports.io</li>
+<li>Use <code>--json</code> + cache results locally</li>
+</ul>
+<h3 id="api-returned-404">”API returned 404”</h3>
+<p><strong>Problem:</strong> League or match not found</p>
+<p><strong>Solution:</strong></p>
+<ul>
+<li>Check league slug is correct: <a href="./reference/leagues.md">Supported Leagues</a></li>
+<li>Verify match ID if using calendar export</li>
+<li>Some leagues may be off-season</li>
+</ul>
+<h3 id="connection-timeout">Connection timeout</h3>
+<p><strong>Problem:</strong> Network issues or API down</p>
+<p><strong>Solution:</strong></p>
+<ul>
+<li>Check internet connection</li>
+<li>Check API-Sports status: <a href="https://api-sports.io">https://api-sports.io</a></li>
+<li>Try again in a few minutes</li>
+</ul>
+<h2 id="team-commands">Team Commands</h2>
+<h3 id="no-team-found">”No team found”</h3>
+<p><strong>Problem:</strong> Team name not matching</p>
+<p><strong>Solutions:</strong></p>
+<ol>
+<li>
+<p><strong>Try <code>team search</code> first:</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">rugbyclaw</span><span style="color:#9ECBFF"> team</span><span style="color:#9ECBFF"> search</span><span style="color:#9ECBFF"> toulouse</span></span></code></pre>
+</li>
+<li>
+<p><strong>Use partial names:</strong></p>
+<ul>
+<li>✅ <code>toulouse</code> (works)</li>
+<li>❌ <code>Stade Toulousain Rugby Club</code> (too specific)</li>
+</ul>
+</li>
+<li>
+<p><strong>Check spelling</strong></p>
+</li>
+<li>
+<p><strong>Use team ID:</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">rugbyclaw</span><span style="color:#9ECBFF"> team</span><span style="color:#9ECBFF"> next</span><span style="color:#79B8FF"> 107</span></span></code></pre>
+</li>
+</ol>
+<h3 id="wrong-team-showing-up">Wrong team showing up</h3>
+<p><strong>Problem:</strong> Multiple teams match query</p>
+<p><strong>Solution:</strong></p>
+<ul>
+<li>Be more specific: <code>"toulouse"</code> → <code>"stade toulousain"</code></li>
+<li>Use team ID from search results</li>
+<li>Put name in quotes if it has spaces</li>
+</ul>
+<h2 id="display-issues">Display Issues</h2>
+<h3 id="colors-not-showing">Colors not showing</h3>
+<p><strong>Problem:</strong> Terminal doesn’t support colors</p>
+<p><strong>Solution:</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#6A737D"># Disable colors</span></span>
+<span class="line"><span style="color:#B392F0">rugbyclaw</span><span style="color:#9ECBFF"> scores</span><span style="color:#79B8FF"> --no-color</span></span></code></pre>
+<h3 id="times-in-wrong-timezone">Times in wrong timezone</h3>
+<p><strong>Problem:</strong> Timezone not configured correctly</p>
+<p><strong>Solution:</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">rugbyclaw</span><span style="color:#9ECBFF"> config</span></span>
+<span class="line"><span style="color:#6A737D"># Select correct timezone in wizard</span></span></code></pre>
+<h2 id="cache-issues">Cache Issues</h2>
+<h3 id="old-data-showing">Old data showing</h3>
+<p><strong>Problem:</strong> Cached responses not refreshing</p>
+<p><strong>Solution:</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#6A737D"># Clear cache</span></span>
+<span class="line"><span style="color:#B392F0">rm</span><span style="color:#79B8FF"> -rf</span><span style="color:#9ECBFF"> ~/.cache/rugbyclaw/</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># Next command will fetch fresh data</span></span>
+<span class="line"><span style="color:#B392F0">rugbyclaw</span><span style="color:#9ECBFF"> scores</span></span></code></pre>
+<h2 id="still-having-issues">Still Having Issues?</h2>
+<ol>
+<li>
+<p><strong>Check recent changes:</strong></p>
+<ul>
+<li><a href="https://github.com/pocarles/rugbyclaw/issues">GitHub Issues</a></li>
+<li><a href="https://github.com/pocarles/rugbyclaw/releases">Recent Releases</a></li>
+</ul>
+</li>
+<li>
+<p><strong>File a bug report:</strong></p>
+<ul>
+<li>Go to <a href="https://github.com/pocarles/rugbyclaw/issues/new">GitHub Issues</a></li>
+<li>Include:
+<ul>
+<li>Command you ran</li>
+<li>Error message</li>
+<li>Your OS</li>
+<li>RugbyClaw version (<code>rugbyclaw --version</code>)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Check API-Sports status:</strong></p>
+<ul>
+<li><a href="https://api-sports.io">https://api-sports.io</a></li>
+<li>Their API might be having issues</li>
+</ul>
+</li>
+</ol>
+<hr>
+<p><em>Last updated: 2026-02-02</em></p>

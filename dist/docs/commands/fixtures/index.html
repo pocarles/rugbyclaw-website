@@ -1,0 +1,96 @@
+<!DOCTYPE html><meta charset="utf-8"><h1 id="rugbyclaw-fixtures">rugbyclaw fixtures</h1>
+<blockquote>
+<p>View upcoming matches</p>
+</blockquote>
+<h2 id="usage">Usage</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">rugbyclaw</span><span style="color:#9ECBFF"> fixtures</span><span style="color:#E1E4E8"> [options] [league]</span></span></code></pre>
+<h2 id="arguments">Arguments</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Argument</th><th>Description</th></tr></thead><tbody><tr><td><code>league</code></td><td>Filter to specific league (optional)</td></tr></tbody></table>
+<h2 id="options">Options</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Option</th><th>Description</th><th>Default</th></tr></thead><tbody><tr><td><code>-n, --limit &#x3C;number></code></td><td>Number of matches to show</td><td>15</td></tr><tr><td><code>--ics</code></td><td>Export to .ics calendar file</td><td>false</td></tr><tr><td><code>--show-ids</code></td><td>Show match IDs for calendar export</td><td>false</td></tr><tr><td><code>--json</code></td><td>Output as JSON</td><td>false</td></tr></tbody></table>
+<h2 id="examples">Examples</h2>
+<h3 id="all-your-leagues">All your leagues</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">rugbyclaw</span><span style="color:#9ECBFF"> fixtures</span></span></code></pre>
+<p>Shows next 15 matches across all your favorite leagues.</p>
+<h3 id="specific-league">Specific league</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">rugbyclaw</span><span style="color:#9ECBFF"> fixtures</span><span style="color:#9ECBFF"> top14</span></span></code></pre>
+<p>Shows next 15 Top 14 matches only.</p>
+<h3 id="limit-results">Limit results</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">rugbyclaw</span><span style="color:#9ECBFF"> fixtures</span><span style="color:#79B8FF"> -n</span><span style="color:#79B8FF"> 5</span></span></code></pre>
+<p>Shows only next 5 matches.</p>
+<h3 id="export-to-calendar">Export to calendar</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">rugbyclaw</span><span style="color:#9ECBFF"> fixtures</span><span style="color:#79B8FF"> --ics</span></span></code></pre>
+<p>Creates <code>fixtures.ics</code> file you can import to your calendar app.</p>
+<h3 id="show-match-ids">Show match IDs</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">rugbyclaw</span><span style="color:#9ECBFF"> fixtures</span><span style="color:#79B8FF"> --show-ids</span></span></code></pre>
+<p>Displays match IDs (useful for <code>rugbyclaw calendar &#x3C;id></code>).</p>
+<h2 id="supported-leagues">Supported Leagues</h2>
+<p>Use these slugs as the <code>[league]</code> argument:</p>
+<ul>
+<li><code>top14</code> - Top 14 (France)</li>
+<li><code>premiership</code> - Premiership Rugby (England)</li>
+<li><code>urc</code> - United Rugby Championship</li>
+<li><code>pro_d2</code> - Pro D2 (France)</li>
+<li><code>super_rugby</code> - Super Rugby Pacific</li>
+<li><code>champions_cup</code> - European Rugby Champions Cup</li>
+<li><code>challenge_cup</code> - European Rugby Challenge Cup</li>
+<li><code>six_nations</code> - Six Nations</li>
+</ul>
+<p><a href="../reference/leagues.md">See all leagues</a></p>
+<h2 id="tips">Tips</h2>
+<ul>
+<li>Use <code>--ics</code> to sync entire schedule to your calendar</li>
+<li>Check specific leagues during tournament weeks</li>
+<li>Combine with <code>--json</code> for custom scripts</li>
+</ul>
+<h2 id="related-commands">Related Commands</h2>
+<ul>
+<li><a href="./scores.md">scores</a> - Today’s matches</li>
+<li><a href="./calendar.md">calendar</a> - Export single match</li>
+<li><a href="./results.md">results</a> - Past results</li>
+</ul>
+<hr>
+<p><em>Last updated: 2026-02-02</em></p>

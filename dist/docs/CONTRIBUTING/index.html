@@ -1,0 +1,171 @@
+<!DOCTYPE html><meta charset="utf-8"><h1 id="documentation-contributing-guidelines">Documentation Contributing Guidelines</h1>
+<h2 id="when-to-update-docs">When to Update Docs</h2>
+<p>Update documentation when:</p>
+<ul>
+<li>✅ New command added</li>
+<li>✅ Command behavior changes</li>
+<li>✅ New option added to existing command</li>
+<li>✅ New use case discovered</li>
+<li>✅ User reports confusion about a feature</li>
+<li>✅ API or data source changes</li>
+</ul>
+<h2 id="how-to-update">How to Update</h2>
+<ol>
+<li><strong>Edit the relevant <code>.md</code> file</strong> in <code>/docs</code></li>
+<li><strong>Update frontmatter</strong> - Change <code>updated: YYYY-MM-DD</code> to today</li>
+<li><strong>Test all code examples</strong> - Every example should work as-is</li>
+<li><strong>Follow the style guide</strong> (see below)</li>
+<li><strong>Submit PR</strong> with tag <code>docs</code></li>
+</ol>
+<h2 id="file-structure">File Structure</h2>
+<h3 id="command-documentation-docscommands">Command Documentation (<code>docs/commands/</code>)</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#79B8FF;font-weight:bold">---</span></span>
+<span class="line"><span style="color:#E1E4E8">title: rugbyclaw command</span></span>
+<span class="line"><span style="color:#E1E4E8">description: One-line description</span></span>
+<span class="line"><span style="color:#E1E4E8">category: commands</span></span>
+<span class="line"><span style="color:#E1E4E8">tags: [relevant, tags]</span></span>
+<span class="line"><span style="color:#E1E4E8">updated: YYYY-MM-DD</span></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold">---</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold"># rugbyclaw command</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#85E89D">> One-line description for quick scanning</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold">## Usage</span></span>
+<span class="line"><span style="color:#E1E4E8">[Command syntax]</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold">## Options</span></span>
+<span class="line"><span style="color:#E1E4E8">[Table of options]</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold">## Examples</span></span>
+<span class="line"><span style="color:#E1E4E8">[Real examples with expected output]</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold">## Tips</span></span>
+<span class="line"><span style="color:#E1E4E8">[Helpful hints]</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold">## Related Commands</span></span>
+<span class="line"><span style="color:#E1E4E8">[Links to related docs]</span></span></code></pre>
+<h3 id="guides-docsguides">Guides (<code>docs/guides/</code>)</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#79B8FF;font-weight:bold">---</span></span>
+<span class="line"><span style="color:#E1E4E8">title: Guide Name</span></span>
+<span class="line"><span style="color:#E1E4E8">description: What this guide covers</span></span>
+<span class="line"><span style="color:#E1E4E8">category: guides</span></span>
+<span class="line"><span style="color:#E1E4E8">tags: [relevant, tags]</span></span>
+<span class="line"><span style="color:#E1E4E8">updated: YYYY-MM-DD</span></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold">---</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold"># Guide Name</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#85E89D">> Clear goal statement</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold">## Overview</span></span>
+<span class="line"><span style="color:#E1E4E8">[What you'll learn]</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold">## Prerequisites</span></span>
+<span class="line"><span style="color:#E1E4E8">[What you need first]</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold">## Step-by-Step</span></span>
+<span class="line"><span style="color:#E1E4E8">[Numbered steps with examples]</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold">## Next Steps</span></span>
+<span class="line"><span style="color:#E1E4E8">[What to do after]</span></span></code></pre>
+<h2 id="style-guide">Style Guide</h2>
+<h3 id="writing-style">Writing Style</h3>
+<ul>
+<li>✅ Use present tense (“shows” not “will show”)</li>
+<li>✅ Use active voice (“Run the command” not “The command should be run”)</li>
+<li>✅ Be concise - respect reader’s time</li>
+<li>✅ Use examples liberally</li>
+<li>✅ Show expected output after examples</li>
+<li>❌ Don’t use jargon without explanation</li>
+<li>❌ Don’t assume prior knowledge</li>
+</ul>
+<h3 id="code-examples">Code Examples</h3>
+<ul>
+<li>Always use proper syntax highlighting</li>
+<li>Show expected output when relevant</li>
+<li>Test every example before committing</li>
+<li>Use realistic data</li>
+</ul>
+<p><strong>Good:</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">rugbyclaw</span><span style="color:#9ECBFF"> fixtures</span><span style="color:#9ECBFF"> top14</span></span></code></pre>
+<p><strong>Output:</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>Upcoming Top 14 Fixtures</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Sat, Feb 15, 2026 at 15:00</span></span>
+<span class="line"><span>  Toulouse vs Stade Français Paris</span></span></code></pre>
+<p><strong>Bad:</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>Run the fixtures command</span></span></code></pre>
+<h3 id="headings">Headings</h3>
+<ul>
+<li>Use sentence case (not title case)</li>
+<li>Keep hierarchy logical (H2 → H3, never skip levels)</li>
+<li>Make headings descriptive</li>
+</ul>
+<p><strong>Good:</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#79B8FF;font-weight:bold">## Examples</span></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold">### View today's scores</span></span></code></pre>
+<p><strong>Bad:</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#79B8FF;font-weight:bold">## Examples</span></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold">### Example</span></span></code></pre>
+<h3 id="links">Links</h3>
+<ul>
+<li>Use relative links within docs: <code>[scores](./scores.md)</code></li>
+<li>Use descriptive link text: <code>[Learn about calendar export](../guides/calendar-export.md)</code></li>
+<li>Avoid “click here” or bare URLs</li>
+</ul>
+<h2 id="testing-your-changes">Testing Your Changes</h2>
+<p>Before submitting:</p>
+<ol>
+<li>
+<p><strong>Check markdown syntax</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#6A737D"># Install markdownlint if needed</span></span>
+<span class="line"><span style="color:#B392F0">npm</span><span style="color:#9ECBFF"> install</span><span style="color:#79B8FF"> -g</span><span style="color:#9ECBFF"> markdownlint-cli</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># Lint your changes</span></span>
+<span class="line"><span style="color:#B392F0">markdownlint</span><span style="color:#9ECBFF"> docs/</span></span></code></pre>
+</li>
+<li>
+<p><strong>Verify links</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#6A737D"># Check all internal links work</span></span>
+<span class="line"><span style="color:#B392F0">grep</span><span style="color:#79B8FF"> -r</span><span style="color:#9ECBFF"> "\[.*\](\..*\.md)"</span><span style="color:#9ECBFF"> docs/</span></span></code></pre>
+</li>
+<li>
+<p><strong>Test code examples</strong></p>
+<ul>
+<li>Run every command in your examples</li>
+<li>Verify output matches what you documented</li>
+</ul>
+</li>
+<li>
+<p><strong>Preview on GitHub</strong></p>
+<ul>
+<li>Markdown renders differently on GitHub</li>
+<li>Check that tables, code blocks look good</li>
+</ul>
+</li>
+</ol>
+<h2 id="documentation-priorities">Documentation Priorities</h2>
+<h3 id="high-priority">High Priority</h3>
+<ul>
+<li>Command reference (<code>docs/commands/</code>) - Keep 100% accurate</li>
+<li>Getting started guide - First impression matters</li>
+<li>Troubleshooting - Helps reduce support burden</li>
+</ul>
+<h3 id="medium-priority">Medium Priority</h3>
+<ul>
+<li>Guides - Nice to have, but command docs come first</li>
+<li>Reference docs - Update as features change</li>
+</ul>
+<h3 id="low-priority">Low Priority</h3>
+<ul>
+<li>Polish - Grammar, style (but don’t ignore completely)</li>
+</ul>
+<h2 id="questions">Questions?</h2>
+<ul>
+<li>Check existing docs for examples</li>
+<li>File an issue if uncertain</li>
+<li>Ask in discussions on GitHub</li>
+</ul>
+<hr>
+<p><strong>Remember:</strong> Good docs help users succeed. Bad docs waste everyone’s time.</p>

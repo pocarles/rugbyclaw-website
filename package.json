@@ -1,0 +1,17 @@
+{
+  "name": "rugbyclaw-site",
+  "version": "1.0.0",
+  "description": "RugbyClaw website",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "astro": "^5.17.1"
+  }
+}

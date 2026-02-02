@@ -1,0 +1,64 @@
+<!DOCTYPE html><meta charset="utf-8"><h1 id="rugbyclaw-scores">rugbyclaw scores</h1>
+<blockquote>
+<p>Show today’s matches across your favorite leagues</p>
+</blockquote>
+<h2 id="usage">Usage</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">rugbyclaw</span><span style="color:#9ECBFF"> scores</span><span style="color:#E1E4E8"> [options]</span></span></code></pre>
+<h2 id="options">Options</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Option</th><th>Description</th><th>Default</th></tr></thead><tbody><tr><td><code>--json</code></td><td>Output as JSON</td><td>false</td></tr><tr><td><code>--quiet</code></td><td>Minimal output</td><td>false</td></tr></tbody></table>
+<h2 id="examples">Examples</h2>
+<h3 id="view-todays-matches">View today’s matches</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">rugbyclaw</span><span style="color:#9ECBFF"> scores</span></span></code></pre>
+<p><strong>Output:</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>🏉 Rugby Scores - Sunday, Feb 2, 2026</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Top 14</span></span>
+<span class="line"><span>  Toulouse vs Racing 92          15:00</span></span>
+<span class="line"><span>  Lyon vs Bordeaux              17:00</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Premiership  </span></span>
+<span class="line"><span>  Saracens vs Leicester         14:30</span></span>
+<span class="line"><span>  Bath vs Harlequins            16:45</span></span></code></pre>
+<h3 id="json-output">JSON output</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">rugbyclaw</span><span style="color:#9ECBFF"> scores</span><span style="color:#79B8FF"> --json</span></span></code></pre>
+<p>Returns structured JSON for scripts/automation.</p>
+<h2 id="how-it-works">How It Works</h2>
+<ul>
+<li>Shows matches happening today</li>
+<li>Only displays leagues you selected in config</li>
+<li>Times shown in your configured timezone</li>
+<li>Updates when you run the command (not live-updating)</li>
+</ul>
+<h2 id="tips">Tips</h2>
+<ul>
+<li>Run this command in the morning to see today’s schedule</li>
+<li>Combine with <code>watch</code> for live updates: <code>watch -n 60 rugbyclaw scores</code></li>
+<li>Use <code>--json</code> for integration with other tools</li>
+</ul>
+<h2 id="related-commands">Related Commands</h2>
+<ul>
+<li><a href="./fixtures.md">fixtures</a> - Upcoming matches</li>
+<li><a href="./results.md">results</a> - Recent results</li>
+</ul>
+<hr>
+<p><em>Last updated: 2026-02-02</em></p>

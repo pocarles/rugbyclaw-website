@@ -1,0 +1,167 @@
+<!DOCTYPE html><meta charset="utf-8"><h1 id="rugbyclaw-documentation-for-ai-assistants">RugbyClaw Documentation for AI Assistants</h1>
+<p>This folder contains structured documentation for RugbyClaw CLI - a rugby scores, fixtures, and results tool powered by API-Sports Rugby API.</p>
+<h2 id="documentation-structure">Documentation Structure</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>docs/</span></span>
+<span class="line"><span>├── index.md              # Overview + navigation</span></span>
+<span class="line"><span>├── getting-started.md    # Installation, setup, first commands</span></span>
+<span class="line"><span>├── commands/            # Command reference (one file per command)</span></span>
+<span class="line"><span>│   ├── config.md</span></span>
+<span class="line"><span>│   ├── scores.md</span></span>
+<span class="line"><span>│   ├── fixtures.md</span></span>
+<span class="line"><span>│   ├── results.md</span></span>
+<span class="line"><span>│   ├── team.md</span></span>
+<span class="line"><span>│   └── calendar.md</span></span>
+<span class="line"><span>├── guides/              # Task-oriented tutorials</span></span>
+<span class="line"><span>│   ├── following-teams.md</span></span>
+<span class="line"><span>│   ├── calendar-export.md</span></span>
+<span class="line"><span>│   └── automation.md</span></span>
+<span class="line"><span>├── reference/           # Technical specifications</span></span>
+<span class="line"><span>│   ├── leagues.md</span></span>
+<span class="line"><span>│   ├── configuration.md</span></span>
+<span class="line"><span>│   └── api-limits.md</span></span>
+<span class="line"><span>└── troubleshooting.md   # Common problems + solutions</span></span></code></pre>
+<h2 id="how-to-use-this-documentation">How to Use This Documentation</h2>
+<h3 id="for-setup-questions">For Setup Questions</h3>
+<p>→ Start with <code>getting-started.md</code>
+→ Covers installation, API key, configuration wizard</p>
+<h3 id="for-command-syntax">For Command Syntax</h3>
+<p>→ Check <code>commands/[command-name].md</code>
+→ Each file has: usage, options, examples, tips</p>
+<h3 id="for-use-cases">For Use Cases</h3>
+<p>→ Check <code>guides/</code>
+→ Task-oriented: “How do I follow my team?” etc.</p>
+<h3 id="for-errors--issues">For Errors &#x26; Issues</h3>
+<p>→ Check <code>troubleshooting.md</code> first
+→ Common problems have documented solutions</p>
+<h3 id="for-technical-details">For Technical Details</h3>
+<p>→ Check <code>reference/</code>
+→ League IDs, config file format, API limits</p>
+<h2 id="answering-user-questions">Answering User Questions</h2>
+<ol>
+<li>
+<p><strong>Always check the relevant doc file first</strong></p>
+<ul>
+<li>Docs are the source of truth</li>
+<li>Check <code>updated:</code> date in frontmatter</li>
+</ul>
+</li>
+<li>
+<p><strong>Include exact commands from examples</strong></p>
+<ul>
+<li>All examples are tested and work as-is</li>
+<li>Copy-paste ready for users</li>
+</ul>
+</li>
+<li>
+<p><strong>Verify examples are current</strong></p>
+<ul>
+<li>Check <code>updated:</code> date</li>
+<li>If > 30 days old, verify against CLI help</li>
+</ul>
+</li>
+<li>
+<p><strong>Link to relevant sections</strong></p>
+<ul>
+<li>Cross-reference related commands</li>
+<li>Point to guides for deeper exploration</li>
+</ul>
+</li>
+</ol>
+<h2 id="when-documentation-is-missing">When Documentation is Missing</h2>
+<p>If information isn’t in docs:</p>
+<ol>
+<li>
+<p><strong>Check the command’s —help output</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">rugbyclaw</span><span style="color:#E1E4E8"> [command] --help</span></span></code></pre>
+</li>
+<li>
+<p><strong>Check source code</strong></p>
+<ul>
+<li>Command implementations: <code>/src/commands/</code></li>
+<li>Providers: <code>/src/lib/providers/</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Note the gap</strong></p>
+<ul>
+<li>Documentation may be incomplete</li>
+<li>Suggest user file an issue on GitHub</li>
+</ul>
+</li>
+</ol>
+<h2 id="metadata-format">Metadata Format</h2>
+<p>Each doc file has frontmatter:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#79B8FF;font-weight:bold">---</span></span>
+<span class="line"><span style="color:#E1E4E8">title: Command Name</span></span>
+<span class="line"><span style="color:#E1E4E8">description: One-line description</span></span>
+<span class="line"><span style="color:#E1E4E8">category: commands|guides|reference</span></span>
+<span class="line"><span style="color:#E1E4E8">tags: [tag1, tag2]</span></span>
+<span class="line"><span style="color:#E1E4E8">updated: 2026-02-02</span></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold">---</span></span></code></pre>
+<p>Use this to:</p>
+<ul>
+<li>Find relevant docs quickly</li>
+<li>Check freshness (<code>updated:</code> date)</li>
+<li>Categorize content</li>
+</ul>
+<h2 id="key-facts-about-rugbyclaw">Key Facts About RugbyClaw</h2>
+<ul>
+<li><strong>Data Source:</strong> API-Sports Rugby API (sole provider)</li>
+<li><strong>Free Tier:</strong> 100 requests/day</li>
+<li><strong>Supported Competitions:</strong> 8 leagues (Top 14, Premiership, URC, Champions Cup, Six Nations, Pro D2, Super Rugby, Challenge Cup)</li>
+<li><strong>Focus:</strong> Rugby Union only</li>
+<li><strong>Config Location:</strong> <code>~/.config/rugbyclaw/</code></li>
+<li><strong>Cache:</strong> <code>~/.cache/rugbyclaw/</code> (SWR caching)</li>
+</ul>
+<h2 id="common-user-intents">Common User Intents</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>User Says</th><th>Check</th></tr></thead><tbody><tr><td>”How do I install?”</td><td><code>getting-started.md</code></td></tr><tr><td>”How do I set up?”</td><td><code>getting-started.md</code></td></tr><tr><td>”Show me scores”</td><td><code>commands/scores.md</code></td></tr><tr><td>”Track my team”</td><td><code>guides/following-teams.md</code> or <code>commands/team.md</code></td></tr><tr><td>”Export to calendar”</td><td><code>commands/calendar.md</code> or <code>guides/calendar-export.md</code></td></tr><tr><td>”What leagues?”</td><td><code>reference/leagues.md</code></td></tr><tr><td>”API limit error”</td><td><code>reference/api-limits.md</code></td></tr><tr><td>”Not working”</td><td><code>troubleshooting.md</code></td></tr></tbody></table>
+<h2 id="contributing-to-docs">Contributing to Docs</h2>
+<p>If you identify missing or outdated information:</p>
+<ul>
+<li>Note it for the maintainers</li>
+<li>Check <code>CONTRIBUTING.md</code> for update guidelines</li>
+<li>Users can file issues at github.com/pocarles/rugbyclaw</li>
+</ul>
+<hr>
+<p><strong>Last Updated:</strong> 2026-02-02</p>
