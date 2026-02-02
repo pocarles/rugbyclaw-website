@@ -1,0 +1,70 @@
+---
+import DocsLayout from '../../../layouts/DocsLayout.astro';
+---
+
+<DocsLayout 
+    title="Installation" 
+    description="Install RugbyClaw on macOS, Linux, or Windows">
+    
+    <p class="lead">Install RugbyClaw globally via npm</p>
+
+    <h2>Requirements</h2>
+    <ul>
+        <li><strong>Node.js</strong> 18 or later (<a href="https://nodejs.org" target="_blank" rel="noopener">download</a>)</li>
+        <li><strong>npm</strong> (included with Node.js)</li>
+    </ul>
+
+    <h2>Install</h2>
+    <pre><code>npm install -g rugbyclaw</code></pre>
+
+    <p>This installs RugbyClaw globally so you can run it from anywhere.</p>
+
+    <h2>Verify Installation</h2>
+    <pre><code>rugbyclaw --version</code></pre>
+
+    <p>Should output the version number (e.g., <code>2.0.0</code>).</p>
+
+    <h2>Your First Command</h2>
+    <pre><code>rugbyclaw scores</code></pre>
+
+    <p>Works immediately — no configuration required. Default leagues include Top 14, Premiership, URC, Champions Cup, and Six Nations.</p>
+
+    <h2>Platform-Specific Notes</h2>
+
+    <h3>macOS</h3>
+    <p>Install via <a href="https://brew.sh" target="_blank" rel="noopener">Homebrew</a> if you prefer:</p>
+    <pre><code>brew install node
+npm install -g rugbyclaw</code></pre>
+
+    <h3>Linux</h3>
+    <p>Use your distribution's package manager to install Node.js first:</p>
+    <pre><code># Ubuntu/Debian
+sudo apt update
+sudo apt install nodejs npm
+npm install -g rugbyclaw
+
+# Fedora
+sudo dnf install nodejs npm
+npm install -g rugbyclaw</code></pre>
+
+    <h3>Windows</h3>
+    <ol>
+        <li>Download and install Node.js from <a href="https://nodejs.org" target="_blank" rel="noopener">nodejs.org</a></li>
+        <li>Open PowerShell or Command Prompt</li>
+        <li>Run: <code>npm install -g rugbyclaw</code></li>
+    </ol>
+
+    <h2>Updating</h2>
+    <p>Update to the latest version:</p>
+    <pre><code>npm update -g rugbyclaw</code></pre>
+
+    <h2>Uninstalling</h2>
+    <pre><code>npm uninstall -g rugbyclaw</code></pre>
+
+    <h2>Next Steps</h2>
+    <ul>
+        <li><a href="/docs/quickstart/">Quick Start Guide</a></li>
+        <li><a href="/docs/commands/scores/">Command reference</a></li>
+        <li><a href="/docs/config/">Configuration</a></li>
+    </ul>
+</DocsLayout>

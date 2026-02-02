@@ -1,0 +1,67 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+
+<DocsLayout 
+    title="Documentation" 
+    description="Complete guide to using RugbyClaw — track rugby scores, fixtures, and results from your terminal">
+    
+    <p class="lead">Track rugby scores, fixtures, and results from your terminal. Works out of the box — no setup required.</p>
+
+    <h2>Getting Started</h2>
+    <p>Install RugbyClaw and start tracking your favorite teams in under 30 seconds:</p>
+    
+    <pre><code>npm install -g rugbyclaw
+rugbyclaw scores</code></pre>
+
+    <p>Default leagues include <strong>Top 14</strong>, <strong>Premiership</strong>, <strong>URC</strong>, <strong>Champions Cup</strong>, and <strong>Six Nations</strong>.</p>
+
+    <h2>Core Commands</h2>
+    
+    <h3><a href="/docs/commands/scores/">rugbyclaw scores</a></h3>
+    <p>See today's matches across all your favorite leagues. Shows live scores, upcoming matches, and recent results.</p>
+    
+    <h3><a href="/docs/commands/fixtures/">rugbyclaw fixtures [league]</a></h3>
+    <p>View upcoming matches. Optionally filter by league (e.g., <code>rugbyclaw fixtures top14</code>).</p>
+    
+    <h3><a href="/docs/commands/results/">rugbyclaw results [league]</a></h3>
+    <p>Recent match results with personality-driven summaries.</p>
+    
+    <h3><a href="/docs/commands/team/">rugbyclaw team &lt;name&gt; next|last</a></h3>
+    <p>Track specific teams. Get their next match or last result:</p>
+    <pre><code>rugbyclaw team toulouse next
+rugbyclaw team "stade toulousain" last</code></pre>
+    
+    <h3><a href="/docs/commands/standings/">rugbyclaw standings [league]</a></h3>
+    <p>League tables with points, wins, losses, and goal difference.</p>
+    
+    <h3><a href="/docs/commands/calendar/">rugbyclaw calendar &lt;match&gt;</a></h3>
+    <p>Export matches to your calendar in ICS format.</p>
+
+    <h2>OpenClaw Integration</h2>
+    <p>Use RugbyClaw with OpenClaw AI for natural language queries:</p>
+    <pre><code>openclaw skill add rugbyclaw</code></pre>
+    <p>Then ask naturally: <em>"What's the score in the Toulouse game?"</em> or <em>"When does Toulouse play next?"</em></p>
+
+    <h2>Configuration</h2>
+    <p>RugbyClaw works immediately after install using proxy mode (50 requests/day). For unlimited requests, add your own free <a href="https://api-sports.io" target="_blank" rel="noopener">API-Sports key</a>:</p>
+    <pre><code>rugbyclaw config</code></pre>
+
+    <h2>Supported Leagues</h2>
+    <p>RugbyClaw supports <strong>13 leagues</strong> including:</p>
+    <ul>
+        <li><strong>Club:</strong> Top 14, Pro D2, Premiership, URC, Super Rugby Pacific</li>
+        <li><strong>European:</strong> Champions Cup, Challenge Cup</li>
+        <li><strong>International:</strong> Six Nations, Women's Six Nations, Rugby Championship</li>
+        <li><strong>Regional:</strong> Currie Cup, NPC, MLR</li>
+        <li><strong>World Cup</strong></li>
+    </ul>
+    <p><a href="/docs/leagues/">See full league reference →</a></p>
+
+    <h2>Need Help?</h2>
+    <ul>
+        <li><a href="/docs/troubleshooting/">Troubleshooting guide</a></li>
+        <li><a href="https://github.com/pocarles/rugbyclaw/issues" target="_blank" rel="noopener">File an issue on GitHub</a></li>
+        <li><a href="https://x.com/pocarles" target="_blank" rel="noopener">Reach out on Twitter</a></li>
+    </ul>
+</DocsLayout>

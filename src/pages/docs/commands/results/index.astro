@@ -1,0 +1,69 @@
+---
+import DocsLayout from '../../../../layouts/DocsLayout.astro';
+---
+
+<DocsLayout 
+    title="rugbyclaw results" 
+    description="View recent rugby match results">
+    
+    <p class="lead">View recent rugby match results with personality-driven summaries</p>
+
+    <h2>Usage</h2>
+    <pre><code>rugbyclaw results [league] [options]</code></pre>
+
+    <h2>Examples</h2>
+    
+    <h3>View all recent results</h3>
+    <pre><code>rugbyclaw results</code></pre>
+    <p>Shows recent results across all your favorite leagues.</p>
+
+    <h3>Filter by league</h3>
+    <pre><code>rugbyclaw results top14
+rugbyclaw results premiership
+rugbyclaw results six_nations</code></pre>
+
+    <h2>Options</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Option</th>
+                <th>Description</th>
+                <th>Default</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>--json</code></td>
+                <td>Output as JSON</td>
+                <td>false</td>
+            </tr>
+            <tr>
+                <td><code>--days</code></td>
+                <td>Number of days back</td>
+                <td>7</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Match Summaries</h2>
+    <p>Results include personality-driven summaries based on the outcome:</p>
+    <ul>
+        <li><strong>Big wins:</strong> "Absolute clinic. That wasn't a match, that was a statement."</li>
+        <li><strong>Close wins:</strong> "Heart attack rugby. Clenched the whole second half."</li>
+        <li><strong>Losses:</strong> "Let's not talk about it. Pain. Moving on."</li>
+    </ul>
+
+    <h2>Tips</h2>
+    <ul>
+        <li>Check Monday mornings for weekend results</li>
+        <li>Use <code>--days 14</code> for two weeks of history</li>
+        <li>Combine with <code>rugbyclaw team last</code> for specific teams</li>
+    </ul>
+
+    <h2>Related Commands</h2>
+    <ul>
+        <li><a href="/docs/commands/scores/">rugbyclaw scores</a> - Today's matches</li>
+        <li><a href="/docs/commands/fixtures/">rugbyclaw fixtures</a> - Upcoming matches</li>
+        <li><a href="/docs/commands/team/">rugbyclaw team</a> - Team-specific queries</li>
+    </ul>
+</DocsLayout>

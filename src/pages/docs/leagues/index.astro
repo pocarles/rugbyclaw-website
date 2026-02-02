@@ -1,0 +1,107 @@
+---
+import DocsLayout from '../../../layouts/DocsLayout.astro';
+---
+
+<DocsLayout 
+    title="Supported Leagues" 
+    description="All rugby competitions supported by RugbyClaw">
+    
+    <p class="lead">8 rugby competitions supported by RugbyClaw</p>
+
+    <h2>Club Competitions</h2>
+
+    <h3>Top 14 (France)</h3>
+    <ul>
+        <li><strong>Slug:</strong> <code>top14</code></li>
+        <li><strong>Teams:</strong> 14</li>
+        <li><strong>Season:</strong> September - June</li>
+        <li><strong>Format:</strong> Regular season + playoffs</li>
+    </ul>
+
+    <h3>Premiership Rugby (England)</h3>
+    <ul>
+        <li><strong>Slug:</strong> <code>premiership</code></li>
+        <li><strong>Teams:</strong> 10</li>
+        <li><strong>Season:</strong> September - June</li>
+        <li><strong>Format:</strong> Regular season + playoffs</li>
+    </ul>
+
+    <h3>United Rugby Championship (URC)</h3>
+    <ul>
+        <li><strong>Slug:</strong> <code>urc</code></li>
+        <li><strong>Teams:</strong> 16 (Ireland, Scotland, Wales, Italy, South Africa)</li>
+        <li><strong>Season:</strong> September - June</li>
+        <li><strong>Format:</strong> Multi-nation league</li>
+    </ul>
+
+    <h3>Pro D2 (France)</h3>
+    <ul>
+        <li><strong>Slug:</strong> <code>pro_d2</code></li>
+        <li><strong>Teams:</strong> 16</li>
+        <li><strong>Season:</strong> August - June</li>
+        <li><strong>Format:</strong> Second division of French rugby</li>
+    </ul>
+
+    <h3>Super Rugby Pacific</h3>
+    <ul>
+        <li><strong>Slug:</strong> <code>super_rugby</code></li>
+        <li><strong>Teams:</strong> 12 (Australia, New Zealand, Pacific Islands)</li>
+        <li><strong>Season:</strong> February - July</li>
+        <li><strong>Format:</strong> Southern Hemisphere competition</li>
+    </ul>
+
+    <h2>European Competitions</h2>
+
+    <h3>European Rugby Champions Cup</h3>
+    <ul>
+        <li><strong>Slug:</strong> <code>champions_cup</code></li>
+        <li><strong>Teams:</strong> 24</li>
+        <li><strong>Season:</strong> December - May</li>
+        <li><strong>Format:</strong> Top European club competition</li>
+    </ul>
+
+    <h3>European Rugby Challenge Cup</h3>
+    <ul>
+        <li><strong>Slug:</strong> <code>challenge_cup</code></li>
+        <li><strong>Teams:</strong> 18</li>
+        <li><strong>Season:</strong> December - May</li>
+        <li><strong>Format:</strong> Secondary European competition</li>
+    </ul>
+
+    <h2>International</h2>
+
+    <h3>Six Nations</h3>
+    <ul>
+        <li><strong>Slug:</strong> <code>six_nations</code></li>
+        <li><strong>Teams:</strong> 6 (England, France, Ireland, Italy, Scotland, Wales)</li>
+        <li><strong>Season:</strong> February - March</li>
+        <li><strong>Format:</strong> Annual international tournament</li>
+    </ul>
+
+    <h2>Usage</h2>
+    <p>Use league slugs in commands:</p>
+    
+    <pre><code># View Top 14 fixtures
+rugbyclaw fixtures top14
+
+# Recent Champions Cup results
+rugbyclaw results champions_cup
+
+# Six Nations fixtures
+rugbyclaw fixtures six_nations</code></pre>
+
+    <h2>Adding Leagues to Config</h2>
+    <p>During <code>rugbyclaw config</code>, you can select which leagues to follow. Only selected leagues appear in:</p>
+    <ul>
+        <li><code>rugbyclaw scores</code></li>
+        <li><code>rugbyclaw fixtures</code> (without league argument)</li>
+        <li><code>rugbyclaw results</code> (without league argument)</li>
+    </ul>
+
+    <h2>Notes</h2>
+    <ul>
+        <li>All times shown in your configured timezone</li>
+        <li>Data powered by API-Sports Rugby API</li>
+        <li>Coverage: Rugby Union only (no Rugby League)</li>
+    </ul>
+</DocsLayout>

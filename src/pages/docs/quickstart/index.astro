@@ -1,0 +1,77 @@
+---
+import DocsLayout from '../../../layouts/DocsLayout.astro';
+---
+
+<DocsLayout 
+    title="Quick Start" 
+    description="Get started with RugbyClaw in under 30 seconds">
+    
+    <p class="lead">Works immediately after install — no configuration required.</p>
+
+    <h2>Installation</h2>
+    <p>Install globally via npm:</p>
+    <pre><code>npm install -g rugbyclaw</code></pre>
+
+    <h2>Your First Command</h2>
+    <p>Check today's scores across default leagues:</p>
+    <pre><code>rugbyclaw scores</code></pre>
+    
+    <p>Default leagues include:</p>
+    <ul>
+        <li>Top 14 (France)</li>
+        <li>Premiership (England)</li>
+        <li>United Rugby Championship (URC)</li>
+        <li>Champions Cup</li>
+        <li>Six Nations</li>
+    </ul>
+
+    <h2>Track Your Team</h2>
+    <p>Get the next match for your favorite team:</p>
+    <pre><code>rugbyclaw team toulouse next</code></pre>
+    
+    <p>Or check their last result:</p>
+    <pre><code>rugbyclaw team toulouse last</code></pre>
+
+    <h2>View Fixtures</h2>
+    <p>See all upcoming matches:</p>
+    <pre><code>rugbyclaw fixtures</code></pre>
+    
+    <p>Or filter by league:</p>
+    <pre><code>rugbyclaw fixtures top14
+rugbyclaw fixtures premiership</code></pre>
+
+    <h2>Export to Calendar</h2>
+    <p>Add matches to your calendar:</p>
+    <pre><code>rugbyclaw calendar toulouse</code></pre>
+    <p>This exports an ICS file you can import into Google Calendar, Apple Calendar, Outlook, etc.</p>
+
+    <h2>Two Modes</h2>
+    
+    <h3>Proxy Mode (Default)</h3>
+    <p>Works immediately after install. Uses a shared proxy with 50 requests per day — perfect for casual fans.</p>
+    
+    <h3>Direct Mode (Unlimited)</h3>
+    <p>Add your own free API key for unlimited requests:</p>
+    <pre><code>rugbyclaw config</code></pre>
+    
+    <p>Follow the interactive wizard to add your <a href="https://api-sports.io" target="_blank" rel="noopener">API-Sports key</a> (free tier available).</p>
+
+    <h2>OpenClaw Integration</h2>
+    <p>Use natural language with OpenClaw AI:</p>
+    <pre><code>openclaw skill add rugbyclaw</code></pre>
+    
+    <p>Then ask naturally:</p>
+    <ul>
+        <li>"What's the score in the Toulouse game?"</li>
+        <li>"When does Toulouse play next?"</li>
+        <li>"Top 14 fixtures this week"</li>
+        <li>"How did Racing do this weekend?"</li>
+    </ul>
+
+    <h2>Next Steps</h2>
+    <ul>
+        <li><a href="/docs/commands/scores/">Command reference</a></li>
+        <li><a href="/docs/leagues/">Supported leagues</a></li>
+        <li><a href="/docs/config/">Configuration guide</a></li>
+    </ul>
+</DocsLayout>

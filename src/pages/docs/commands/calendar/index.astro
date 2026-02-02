@@ -1,0 +1,92 @@
+---
+import DocsLayout from '../../../../layouts/DocsLayout.astro';
+---
+
+<DocsLayout 
+    title="rugbyclaw calendar" 
+    description="Export matches to calendar (ICS format)">
+    
+    <p class="lead">Export matches to your calendar in ICS format</p>
+
+    <h2>Usage</h2>
+    <pre><code>rugbyclaw calendar &lt;match&gt; [options]</code></pre>
+
+    <h2>Examples</h2>
+    
+    <h3>Export a team's matches</h3>
+    <pre><code>rugbyclaw calendar toulouse</code></pre>
+    <p>Creates <code>toulouse-matches.ics</code> with all upcoming matches.</p>
+
+    <h3>Export a specific match</h3>
+    <pre><code>rugbyclaw calendar "toulouse vs racing"</code></pre>
+
+    <h3>Export by league</h3>
+    <pre><code>rugbyclaw calendar top14</code></pre>
+    <p>Exports all upcoming Top 14 matches.</p>
+
+    <h2>Options</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Option</th>
+                <th>Description</th>
+                <th>Default</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>--output</code></td>
+                <td>Custom filename</td>
+                <td>auto-generated</td>
+            </tr>
+            <tr>
+                <td><code>--days</code></td>
+                <td>Days ahead to export</td>
+                <td>30</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Importing ICS Files</h2>
+    
+    <h3>Google Calendar</h3>
+    <ol>
+        <li>Open Google Calendar</li>
+        <li>Click the <strong>+</strong> next to "Other calendars"</li>
+        <li>Select <strong>Import</strong></li>
+        <li>Choose your <code>.ics</code> file</li>
+        <li>Select destination calendar</li>
+        <li>Click <strong>Import</strong></li>
+    </ol>
+
+    <h3>Apple Calendar</h3>
+    <ol>
+        <li>Double-click the <code>.ics</code> file</li>
+        <li>Calendar opens automatically with events</li>
+        <li>Choose which calendar to add to</li>
+        <li>Click <strong>OK</strong></li>
+    </ol>
+
+    <h3>Outlook</h3>
+    <ol>
+        <li>Open Outlook</li>
+        <li>Go to <strong>File</strong> → <strong>Open & Export</strong> → <strong>Import/Export</strong></li>
+        <li>Select <strong>Import an iCalendar (.ics) file</strong></li>
+        <li>Choose your file</li>
+        <li>Click <strong>OK</strong></li>
+    </ol>
+
+    <h2>Tips</h2>
+    <ul>
+        <li>Export your favorite team's matches at the start of each season</li>
+        <li>Set calendar reminders for match day prep</li>
+        <li>Re-export if match times change</li>
+        <li>Combine with <code>rugbyclaw team next --ics</code> for quick single-match export</li>
+    </ul>
+
+    <h2>Related Commands</h2>
+    <ul>
+        <li><a href="/docs/commands/fixtures/">rugbyclaw fixtures</a> - View upcoming matches</li>
+        <li><a href="/docs/commands/team/">rugbyclaw team</a> - Team-specific queries</li>
+    </ul>
+</DocsLayout>

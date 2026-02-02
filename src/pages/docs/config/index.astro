@@ -1,0 +1,76 @@
+---
+import DocsLayout from '../../../layouts/DocsLayout.astro';
+---
+
+<DocsLayout 
+    title="Configuration" 
+    description="Configure RugbyClaw with API key and preferences">
+    
+    <p class="lead">Configure RugbyClaw with API key and preferences</p>
+
+    <h2>Two Modes</h2>
+
+    <h3>Proxy Mode (Default)</h3>
+    <p>Works immediately after install with no configuration. Uses a shared proxy with <strong>50 requests per day</strong> — perfect for casual fans.</p>
+
+    <h3>Direct Mode (Unlimited)</h3>
+    <p>Add your own free API key for unlimited requests:</p>
+    <pre><code>rugbyclaw config</code></pre>
+
+    <h2>Configuration Wizard</h2>
+    <p>Run the interactive setup:</p>
+    <pre><code>rugbyclaw config</code></pre>
+
+    <p>The wizard will guide you through:</p>
+    <ol>
+        <li>API key setup (or skip to use proxy mode)</li>
+        <li>Favorite leagues selection</li>
+        <li>Timezone selection</li>
+        <li>Favorite team (optional)</li>
+    </ol>
+
+    <h2>Get a Free API Key</h2>
+    <ol>
+        <li>Go to <a href="https://api-sports.io" target="_blank" rel="noopener">api-sports.io</a></li>
+        <li>Sign up for a free account</li>
+        <li>Navigate to <strong>My Account</strong> → <strong>API Key</strong></li>
+        <li>Copy your API key</li>
+        <li>Run <code>rugbyclaw config</code> and paste it</li>
+    </ol>
+
+    <p><strong>Free tier includes:</strong></p>
+    <ul>
+        <li>100 requests per day</li>
+        <li>All leagues</li>
+        <li>No credit card required</li>
+    </ul>
+
+    <h2>Config File Location</h2>
+    <p><code>~/.config/rugbyclaw/config.json</code></p>
+
+    <h2>Example Config</h2>
+    <pre><code>{`{
+  "apiKey": "your-api-key-here",
+  "leagues": ["top14", "premiership", "urc", "champions_cup", "six_nations"],
+  "timezone": "America/New_York",
+  "favoriteTeam": "Stade Toulousain"
+}`}</code></pre>
+
+    <h2>Reset Configuration</h2>
+    <p>To start fresh:</p>
+    <pre><code>rm ~/.config/rugbyclaw/config.json
+rugbyclaw config</code></pre>
+
+    <h2>Environment Variables</h2>
+    <p>You can also set the API key via environment variable:</p>
+    <pre><code>export RUGBY_API_KEY="your-api-key-here"</code></pre>
+
+    <p>Add to <code>~/.bashrc</code> or <code>~/.zshrc</code> to make permanent.</p>
+
+    <h2>Related</h2>
+    <ul>
+        <li><a href="/docs/leagues/">Supported Leagues</a></li>
+        <li><a href="/docs/troubleshooting/">Troubleshooting</a></li>
+        <li><a href="/docs/quickstart/">Quick Start</a></li>
+    </ul>
+</DocsLayout>

@@ -1,0 +1,77 @@
+---
+import DocsLayout from '../../../../layouts/DocsLayout.astro';
+---
+
+<DocsLayout 
+    title="rugbyclaw scores" 
+    description="Show today's matches across your favorite leagues">
+    
+    <p class="lead">Show today's matches across your favorite leagues</p>
+
+    <h2>Usage</h2>
+    <pre><code>rugbyclaw scores [options]</code></pre>
+
+    <h2>Options</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Option</th>
+                <th>Description</th>
+                <th>Default</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>--json</code></td>
+                <td>Output as JSON</td>
+                <td>false</td>
+            </tr>
+            <tr>
+                <td><code>--quiet</code></td>
+                <td>Minimal output</td>
+                <td>false</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Examples</h2>
+    
+    <h3>View today's matches</h3>
+    <pre><code>rugbyclaw scores</code></pre>
+    
+    <p><strong>Output:</strong></p>
+    <pre><code>🏉 Rugby Scores - Sunday, Feb 2, 2026
+
+Top 14
+  Toulouse vs Racing 92          15:00
+  Lyon vs Bordeaux              17:00
+
+Premiership  
+  Saracens vs Leicester         14:30
+  Bath vs Harlequins            16:45</code></pre>
+
+    <h3>JSON output</h3>
+    <pre><code>rugbyclaw scores --json</code></pre>
+    <p>Returns structured JSON for scripts/automation.</p>
+
+    <h2>How It Works</h2>
+    <ul>
+        <li>Shows matches happening today</li>
+        <li>Only displays leagues you selected in config</li>
+        <li>Times shown in your configured timezone</li>
+        <li>Updates when you run the command (not live-updating)</li>
+    </ul>
+
+    <h2>Tips</h2>
+    <ul>
+        <li>Run this command in the morning to see today's schedule</li>
+        <li>Combine with <code>watch</code> for live updates: <code>watch -n 60 rugbyclaw scores</code></li>
+        <li>Use <code>--json</code> for integration with other tools</li>
+    </ul>
+
+    <h2>Related Commands</h2>
+    <ul>
+        <li><a href="/docs/commands/fixtures/">rugbyclaw fixtures</a> - Upcoming matches</li>
+        <li><a href="/docs/commands/results/">rugbyclaw results</a> - Recent results</li>
+    </ul>
+</DocsLayout>

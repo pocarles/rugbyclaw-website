@@ -1,0 +1,93 @@
+---
+import DocsLayout from '../../../../layouts/DocsLayout.astro';
+---
+
+<DocsLayout 
+    title="rugbyclaw team" 
+    description="Query specific teams - search, next match, last result">
+    
+    <p class="lead">Query specific teams - search, next match, last result</p>
+
+    <h2>Commands</h2>
+
+    <h3>rugbyclaw team search</h3>
+    <p>Find a team by name.</p>
+    <pre><code>rugbyclaw team search &lt;query&gt;</code></pre>
+
+    <p><strong>Example:</strong></p>
+    <pre><code>rugbyclaw team search toulouse</code></pre>
+
+    <p><strong>Output:</strong></p>
+    <pre><code>Found teams matching "toulouse":
+  - Stade Toulousain (ID: 107)
+  - Toulouse Olympique (ID: 892)</code></pre>
+
+    <h3>rugbyclaw team next</h3>
+    <p>Show team's next match.</p>
+    <pre><code>rugbyclaw team next &lt;name&gt;</code></pre>
+
+    <p><strong>Example:</strong></p>
+    <pre><code>rugbyclaw team next toulouse</code></pre>
+
+    <p><strong>Output:</strong></p>
+    <pre><code>Stade Toulousain - Next Match
+
+Sat, Feb 15, 2026 at 15:00
+Stade Toulousain vs Stade Français Paris
+Competition: Top 14
+Venue: Stade Ernest-Wallon, Toulouse</code></pre>
+
+    <p><strong>Options:</strong></p>
+    <ul>
+        <li><code>--ics</code> - Export match to calendar file</li>
+    </ul>
+
+    <h3>rugbyclaw team last</h3>
+    <p>Show team's last result.</p>
+    <pre><code>rugbyclaw team last &lt;name&gt;</code></pre>
+
+    <p><strong>Example:</strong></p>
+    <pre><code>rugbyclaw team last toulouse</code></pre>
+
+    <p><strong>Output:</strong></p>
+    <pre><code>Stade Toulousain - Last Result
+
+Sat, Feb 8, 2026
+Stade Toulousain 38 - 12 Racing 92
+Competition: Top 14
+
+Match Summary:
+Absolute clinic. Toulouse dominated every aspect of the game.
+Dupont orchestrated a masterclass, Ntamack finished brilliantly.
+Racing never looked like competing.</code></pre>
+
+    <h2>Tips</h2>
+    <ul>
+        <li>Use partial names: <code>toulouse</code> matches <code>Stade Toulousain</code></li>
+        <li>Search first if unsure of exact name</li>
+        <li>Add <code>--ics</code> to next matches to sync to calendar</li>
+        <li>Team names are case-insensitive</li>
+    </ul>
+
+    <h2>Troubleshooting</h2>
+    
+    <h3>"No team found"?</h3>
+    <ul>
+        <li>Try <code>rugbyclaw team search &lt;query&gt;</code> first</li>
+        <li>Use partial name (e.g., "toulouse" not "Stade Toulousain")</li>
+        <li>Check spelling</li>
+    </ul>
+
+    <h3>Wrong team showing up?</h3>
+    <ul>
+        <li>Be more specific in your query</li>
+        <li>Use the team ID: <code>rugbyclaw team next 107</code></li>
+    </ul>
+
+    <h2>Related Commands</h2>
+    <ul>
+        <li><a href="/docs/commands/fixtures/">rugbyclaw fixtures</a> - View all upcoming matches</li>
+        <li><a href="/docs/commands/results/">rugbyclaw results</a> - View recent results</li>
+        <li><a href="/docs/commands/calendar/">rugbyclaw calendar</a> - Export to calendar</li>
+    </ul>
+</DocsLayout>

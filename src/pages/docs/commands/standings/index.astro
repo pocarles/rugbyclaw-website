@@ -1,0 +1,66 @@
+---
+import DocsLayout from '../../../../layouts/DocsLayout.astro';
+---
+
+<DocsLayout 
+    title="rugbyclaw standings" 
+    description="View league tables and standings">
+    
+    <p class="lead">View league tables with points, wins, losses, and goal difference</p>
+
+    <h2>Usage</h2>
+    <pre><code>rugbyclaw standings [league] [options]</code></pre>
+
+    <h2>Examples</h2>
+    
+    <h3>View Top 14 table</h3>
+    <pre><code>rugbyclaw standings top14</code></pre>
+
+    <h3>View Premiership table</h3>
+    <pre><code>rugbyclaw standings premiership</code></pre>
+
+    <h3>JSON output</h3>
+    <pre><code>rugbyclaw standings top14 --json</code></pre>
+
+    <h2>Options</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Option</th>
+                <th>Description</th>
+                <th>Default</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>--json</code></td>
+                <td>Output as JSON</td>
+                <td>false</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>What's Shown</h2>
+    <ul>
+        <li>Team position</li>
+        <li>Games played</li>
+        <li>Wins, draws, losses</li>
+        <li>Points for/against</li>
+        <li>Point differential</li>
+        <li>Total points</li>
+    </ul>
+
+    <h2>Tips</h2>
+    <ul>
+        <li>Check standings after each round to track your team's position</li>
+        <li>Use league slugs from the <a href="/docs/leagues/">leagues reference</a></li>
+        <li>Combine with <code>rugbyclaw fixtures</code> to see upcoming clashes</li>
+    </ul>
+
+    <h2>Related Commands</h2>
+    <ul>
+        <li><a href="/docs/commands/fixtures/">rugbyclaw fixtures</a> - Upcoming matches</li>
+        <li><a href="/docs/commands/results/">rugbyclaw results</a> - Recent results</li>
+        <li><a href="/docs/leagues/">Supported leagues</a> - League reference</li>
+    </ul>
+</DocsLayout>
