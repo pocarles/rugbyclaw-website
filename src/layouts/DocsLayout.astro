@@ -1,5 +1,8 @@
 ---
 const { title, description } = Astro.props;
+
+// Keep in sync with the RugbyClaw npm package version.
+const DOCS_VERSION = "0.1.2";
 ---
 
 <!DOCTYPE html>
@@ -81,6 +84,7 @@ const { title, description } = Astro.props;
                 <div class="sidebar-section">
                     <h3>Reference</h3>
                     <a href="/docs/leagues/">Leagues</a>
+                    <a href="/docs/changelog/">Changelog</a>
                     <a href="/docs/troubleshooting/">Troubleshooting</a>
                 </div>
             </nav>
@@ -90,6 +94,10 @@ const { title, description } = Astro.props;
         <main class="docs-content">
             <article class="prose">
                 <h1>{title}</h1>
+                <p style="margin-top: -0.75rem; margin-bottom: 1.5rem; color: #6b7280; font-size: 0.95rem;">
+                    Docs version: <strong>v{DOCS_VERSION}</strong>
+                    • <a href="https://github.com/pocarles/rugbyclaw/releases" target="_blank" rel="noopener">GitHub Releases</a>
+                </p>
                 <slot />
             </article>
         </main>
