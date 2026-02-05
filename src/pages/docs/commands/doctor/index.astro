@@ -1,0 +1,60 @@
+---
+import DocsLayout from '../../../../layouts/DocsLayout.astro';
+---
+
+<DocsLayout 
+    title="rugbyclaw doctor" 
+    description="Diagnose proxy, API, and configuration issues">
+
+    <p class="lead">Diagnose proxy, API, and configuration issues</p>
+
+    <h2>Usage</h2>
+    <pre><code>rugbyclaw doctor [options]</code></pre>
+
+    <h2>Options</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Option</th>
+                <th>Description</th>
+                <th>Default</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>--json</code></td>
+                <td>Output as JSON</td>
+                <td>false</td>
+            </tr>
+            <tr>
+                <td><code>--quiet</code></td>
+                <td>Minimal output</td>
+                <td>false</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Examples</h2>
+    <pre><code>rugbyclaw doctor
+rugbyclaw doctor --json</code></pre>
+
+    <h2>What It Checks</h2>
+    <ul>
+        <li>Proxy Worker reachability (free mode)</li>
+        <li>API-Sports connectivity (direct mode)</li>
+        <li>Config + secrets health (missing/invalid values)</li>
+        <li>Timezone validity (IANA timezone string)</li>
+    </ul>
+
+    <h2>Tips</h2>
+    <ul>
+        <li>Run <code>rugbyclaw doctor</code> first when you hit rate limits or odd data</li>
+        <li>Use <code>--json</code> when debugging in scripts</li>
+    </ul>
+
+    <h2>Related Pages</h2>
+    <ul>
+        <li><a href="/docs/troubleshooting/">Troubleshooting</a></li>
+        <li><a href="/docs/config/">Setup</a></li>
+    </ul>
+</DocsLayout>
