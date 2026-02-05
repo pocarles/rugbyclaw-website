@@ -1,0 +1,29 @@
+---
+import DocsLayout from "../layouts/DocsLayout.astro";
+
+const title = "Changelog";
+const description = "RugbyClaw release notes and notable changes.";
+---
+
+<DocsLayout title={title} description={description}>
+  <p>
+    Release notes for RugbyClaw. Source of truth is GitHub releases.
+  </p>
+
+  <h2>0.1.2 <small style="font-weight:400; opacity:0.8;">(2026-02-05)</small></h2>
+  <ul>
+    <li>Added <code>rugbyclaw version</code>.</li>
+    <li>Timezone support (select in <code>rugbyclaw config</code> + <code>--tz</code> override).</li>
+    <li>Improved free-mode <code>status</code> output.</li>
+    <li>Better handling of TBD kickoff times (shows “Coming Soon/TBD”).</li>
+    <li>Proxy worker deploy workflow improvements.</li>
+    <li>Expanded documentation (commands, guides, configuration reference).</li>
+  </ul>
+
+  <p>
+    Full details:
+    <a href="https://github.com/pocarles/rugbyclaw/releases/tag/v0.1.2" target="_blank" rel="noopener">
+      GitHub release v0.1.2
+    </a>
+  </p>
+</DocsLayout>
