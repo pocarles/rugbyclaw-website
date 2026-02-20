@@ -222,6 +222,14 @@ code {
     letter-spacing: -0.02em;
 }
 
+.hero-title-line {
+    display: block;
+}
+
+.hero-title-line--primary {
+    white-space: nowrap;
+}
+
 .hero-subtitle {
     font-size: 1.25rem;
     color: var(--text-secondary);
@@ -823,6 +831,10 @@ section {
         order: -1;
         max-width: 550px;
         margin: 0 auto;
+    }
+
+    .hero-title-line--primary {
+        white-space: normal;
     }
     
     .openclaw-examples {
