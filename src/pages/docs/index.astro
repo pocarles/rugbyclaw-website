@@ -6,41 +6,48 @@ import DocsLayout from '../../layouts/DocsLayout.astro';
     title="Documentation" 
     description="Complete guide to using RugbyClaw — track rugby scores, fixtures, and results from your terminal">
     
-    <p class="lead">Track rugby scores, fixtures, and results from your terminal. Works out of the box — no setup required.</p>
+    <p class="lead">Track rugby scores, fixtures, and results from your terminal. Works out of the box in free mode — no API key required.</p>
 
     <h2>Getting Started</h2>
-    <p>Install RugbyClaw and start tracking your favorite teams in under 30 seconds:</p>
+    <p>Install RugbyClaw and run the beginner flow in under 30 seconds:</p>
     
     <pre><code>npm install -g rugbyclaw
-rugbyclaw scores</code></pre>
+rugbyclaw start</code></pre>
 
     <p>Default leagues include <strong>Top 14</strong>, <strong>Premiership</strong>, <strong>URC</strong>, <strong>Champions Cup</strong>, and <strong>Six Nations</strong>.</p>
+    <p>Free mode includes a shared proxy with <strong>50 requests/day</strong>. Add your own API key anytime for direct mode.</p>
 
     <h2>Core Commands</h2>
     
-    <h3><a href="/docs/commands/scores/">rugbyclaw scores</a></h3>
+    <h3><a href="https://github.com/pocarles/rugbyclaw/blob/main/docs/commands/scores.md" target="_blank" rel="noopener">rugbyclaw scores</a></h3>
     <p>See today's matches across all your favorite leagues. Shows live scores, upcoming matches, and recent results.</p>
     
-    <h3><a href="/docs/commands/fixtures/">rugbyclaw fixtures [league]</a></h3>
+    <h3><a href="https://github.com/pocarles/rugbyclaw/blob/main/docs/commands/fixtures.md" target="_blank" rel="noopener">rugbyclaw fixtures [league]</a></h3>
     <p>View upcoming matches. Optionally filter by league (e.g., <code>rugbyclaw fixtures top14</code>).</p>
     
-    <h3><a href="/docs/commands/results/">rugbyclaw results [league]</a></h3>
+    <h3><a href="https://github.com/pocarles/rugbyclaw/blob/main/docs/commands/results.md" target="_blank" rel="noopener">rugbyclaw results [league]</a></h3>
     <p>Recent match results with personality-driven summaries.</p>
     
-    <h3><a href="/docs/commands/team/">rugbyclaw team &lt;name&gt; next|last</a></h3>
+    <h3><a href="https://github.com/pocarles/rugbyclaw/blob/main/docs/commands/team.md" target="_blank" rel="noopener">rugbyclaw team search|next|last</a></h3>
     <p>Track specific teams. Get their next match or last result:</p>
     <pre><code>rugbyclaw team toulouse next
 rugbyclaw team "stade toulousain" last</code></pre>
     
-    <h3><a href="/docs/commands/standings/">rugbyclaw standings [league]</a></h3>
-    <p>League tables with points, wins, losses, and goal difference.</p>
+    <h3><a href="https://github.com/pocarles/rugbyclaw/blob/main/docs/commands/doctor.md" target="_blank" rel="noopener">rugbyclaw doctor</a></h3>
+    <p>Diagnose proxy/API/config issues with clear checks for onboarding and support.</p>
     
-    <h3><a href="/docs/commands/calendar/">rugbyclaw calendar &lt;match&gt;</a></h3>
+    <h3><a href="https://github.com/pocarles/rugbyclaw/blob/main/docs/commands/calendar.md" target="_blank" rel="noopener">rugbyclaw calendar &lt;matchId&gt;</a></h3>
     <p>Export matches to your calendar in ICS format.</p>
 
+    <h3><a href="https://github.com/pocarles/rugbyclaw/blob/main/docs/commands/status.md" target="_blank" rel="noopener">rugbyclaw status</a></h3>
+    <p>See current mode, timezone, and active leagues in one command.</p>
+
+    <h3><a href="https://github.com/pocarles/rugbyclaw/blob/main/docs/commands/openclaw.md" target="_blank" rel="noopener">rugbyclaw openclaw init</a></h3>
+    <p>Get OpenClaw-ready setup guidance and automation-safe command mapping.</p>
+
     <h2>OpenClaw Integration</h2>
-    <p>Use RugbyClaw with OpenClaw AI for natural language queries:</p>
-    <pre><code>openclaw skill add rugbyclaw</code></pre>
+    <p>Use RugbyClaw with OpenClaw AI for natural language queries and automation:</p>
+    <pre><code>rugbyclaw openclaw init --agent</code></pre>
     <p>Then ask naturally: <em>"What's the score in the Toulouse game?"</em> or <em>"When does Toulouse play next?"</em></p>
 
     <h2>Configuration</h2>
@@ -56,11 +63,11 @@ rugbyclaw team "stade toulousain" last</code></pre>
         <li><strong>Regional:</strong> Currie Cup, NPC, MLR</li>
         <li><strong>World Cup</strong></li>
     </ul>
-    <p><a href="/docs/leagues/">See full league reference →</a></p>
+    <p><a href="https://github.com/pocarles/rugbyclaw/blob/main/docs/reference/leagues.md" target="_blank" rel="noopener">See full league reference →</a></p>
 
     <h2>Need Help?</h2>
     <ul>
-        <li><a href="/docs/troubleshooting/">Troubleshooting guide</a></li>
+        <li><a href="https://github.com/pocarles/rugbyclaw/blob/main/docs/troubleshooting.md" target="_blank" rel="noopener">Troubleshooting guide</a></li>
         <li><a href="https://github.com/pocarles/rugbyclaw/issues" target="_blank" rel="noopener">File an issue on GitHub</a></li>
         <li><a href="https://x.com/pocarles" target="_blank" rel="noopener">Reach out on Twitter</a></li>
     </ul>

@@ -13,8 +13,8 @@ import DocsLayout from '../../../layouts/DocsLayout.astro';
     <pre><code>npm install -g rugbyclaw</code></pre>
 
     <h2>Your First Command</h2>
-    <p>Check today's scores across default leagues:</p>
-    <pre><code>rugbyclaw scores</code></pre>
+    <p>Run the quick onboarding flow:</p>
+    <pre><code>rugbyclaw start</code></pre>
     
     <p>Default leagues include:</p>
     <ul>
@@ -42,7 +42,8 @@ rugbyclaw fixtures premiership</code></pre>
 
     <h2>Export to Calendar</h2>
     <p>Add matches to your calendar:</p>
-    <pre><code>rugbyclaw calendar toulouse</code></pre>
+    <pre><code>rugbyclaw fixtures --show-ids
+rugbyclaw calendar 49979</code></pre>
     <p>This exports an ICS file you can import into Google Calendar, Apple Calendar, Outlook, etc.</p>
 
     <h2>Two Modes</h2>
@@ -58,7 +59,7 @@ rugbyclaw fixtures premiership</code></pre>
 
     <h2>OpenClaw Integration</h2>
     <p>Use natural language with OpenClaw AI:</p>
-    <pre><code>openclaw skill add rugbyclaw</code></pre>
+    <pre><code>rugbyclaw openclaw init --agent</code></pre>
     
     <p>Then ask naturally:</p>
     <ul>
@@ -70,7 +71,7 @@ rugbyclaw fixtures premiership</code></pre>
 
     <h2>Next Steps</h2>
     <ul>
-        <li><a href="/docs/commands/scores/">Command reference</a></li>
+        <li><a href="/docs/commands/doctor/">Doctor diagnostics</a></li>
         <li><a href="/docs/leagues/">Supported leagues</a></li>
         <li><a href="/docs/config/">Configuration guide</a></li>
     </ul>
