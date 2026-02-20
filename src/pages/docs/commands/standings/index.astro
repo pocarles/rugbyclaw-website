@@ -6,23 +6,26 @@ import DocsLayout from '../../../../layouts/DocsLayout.astro';
     title="rugbyclaw standings" 
     description="View league tables and standings">
     
-    <p class="lead">View league tables with points, wins, losses, and goal difference</p>
+    <p class="lead"><strong>Coming Soon</strong> — this command is planned but not available in the current release.</p>
 
-    <h2>Usage</h2>
+    <h2>Planned Usage</h2>
     <pre><code>rugbyclaw standings [league] [options]</code></pre>
 
-    <h2>Examples</h2>
+    <h2>Status</h2>
+    <p>RugbyClaw does <strong>not</strong> support <code>rugbyclaw standings</code> yet. We keep this page to make the roadmap explicit and avoid misleading users.</p>
+
+    <h2>Planned Examples</h2>
     
-    <h3>View Top 14 table</h3>
+    <h3>Top 14 table</h3>
     <pre><code>rugbyclaw standings top14</code></pre>
 
-    <h3>View Premiership table</h3>
+    <h3>Premiership table</h3>
     <pre><code>rugbyclaw standings premiership</code></pre>
 
     <h3>JSON output</h3>
     <pre><code>rugbyclaw standings top14 --json</code></pre>
 
-    <h2>Options</h2>
+    <h2>Planned Options</h2>
     <table>
         <thead>
             <tr>
@@ -40,7 +43,7 @@ import DocsLayout from '../../../../layouts/DocsLayout.astro';
         </tbody>
     </table>
 
-    <h2>What's Shown</h2>
+    <h2>Planned Output</h2>
     <ul>
         <li>Team position</li>
         <li>Games played</li>
@@ -50,11 +53,11 @@ import DocsLayout from '../../../../layouts/DocsLayout.astro';
         <li>Total points</li>
     </ul>
 
-    <h2>Tips</h2>
+    <h2>What works today</h2>
     <ul>
-        <li>Check standings after each round to track your team's position</li>
-        <li>Use league slugs from the <a href="/docs/leagues/">leagues reference</a></li>
-        <li>Combine with <code>rugbyclaw fixtures</code> to see upcoming clashes</li>
+        <li><a href="/docs/commands/fixtures/">rugbyclaw fixtures</a> for upcoming matches</li>
+        <li><a href="/docs/commands/results/">rugbyclaw results</a> for recent outcomes</li>
+        <li><a href="/docs/commands/team/">rugbyclaw team</a> for team-specific follow-up</li>
     </ul>
 
     <h2>Related Commands</h2>
