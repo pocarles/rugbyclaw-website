@@ -1,7 +1,7 @@
 {
   "name": "RugbyClaw",
   "type": "cli",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "homepage": "https://rugbyclaw.com",
   "repository": "https://github.com/pocarles/rugbyclaw",
   "docs_last_updated": "2026-02-20",
@@ -85,5 +85,5 @@
     "versioning": "SemVer",
     "source_of_truth": "GitHub repository + releases"
   },
-  "generated_at": "2026-02-20T15:46:36.001Z"
+  "generated_at": "2026-02-20T15:52:14.436Z"
 }

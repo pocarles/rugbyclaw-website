@@ -1,5 +1,5 @@
 export const SITE_URL = 'https://rugbyclaw.com';
-export const CLI_VERSION = '0.1.7';
+export const CLI_VERSION = '0.1.8';
 export const DOCS_LAST_UPDATED = '2026-02-20';
 
 export const PROJECT_REPO_URL = 'https://github.com/pocarles/rugbyclaw';
@@ -76,4 +76,3 @@ export function buildLlmsText(full = false): string {
 
   return `${lines.join('\n')}\n`;
 }
-

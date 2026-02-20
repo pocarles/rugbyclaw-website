@@ -2,7 +2,7 @@
 
 > Rugby Union CLI + OpenClaw skill for scores, fixtures, results, and automation-safe output.
 
-Version: 0.1.7
+Version: 0.1.8
 Last-Updated: 2026-02-20
 
 ## Canonical Documentation

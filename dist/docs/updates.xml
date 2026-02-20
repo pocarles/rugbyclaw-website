@@ -5,33 +5,33 @@
     <link>https://rugbyclaw.com/docs/</link>
     <description>Agent-friendly docs updates and canonical release feeds for RugbyClaw.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 20 Feb 2026 15:46:36 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 20 Feb 2026 15:52:14 GMT</lastBuildDate>
     <item>
-      <title>RugbyClaw docs snapshot v0.1.7</title>
+      <title>RugbyClaw docs snapshot v0.1.8</title>
       <link>https://rugbyclaw.com/docs/</link>
       <description>Human docs with stable machine-readable endpoints for AI agents.</description>
       <pubDate>Fri, 20 Feb 2026 00:00:00 GMT</pubDate>
-      <guid>https://rugbyclaw.com/docs/#v0.1.7</guid>
+      <guid>https://rugbyclaw.com/docs/#v0.1.8</guid>
     </item>
 <item>
       <title>Agent manifest (JSON)</title>
       <link>https://rugbyclaw.com/docs/agent.json</link>
       <description>Current command/output contracts for personal AI agents.</description>
-      <pubDate>Fri, 20 Feb 2026 15:46:36 GMT</pubDate>
+      <pubDate>Fri, 20 Feb 2026 15:52:14 GMT</pubDate>
       <guid>https://rugbyclaw.com/docs/agent.json</guid>
     </item>
 <item>
       <title>Releases feed (Atom)</title>
       <link>https://github.com/pocarles/rugbyclaw/releases.atom</link>
       <description>Canonical release stream. Human release page: https://github.com/pocarles/rugbyclaw/releases</description>
-      <pubDate>Fri, 20 Feb 2026 15:46:36 GMT</pubDate>
+      <pubDate>Fri, 20 Feb 2026 15:52:14 GMT</pubDate>
       <guid>https://github.com/pocarles/rugbyclaw/releases.atom</guid>
     </item>
 <item>
       <title>Commits feed (Atom)</title>
       <link>https://github.com/pocarles/rugbyclaw/commits/main.atom</link>
       <description>Implementation-level updates from main branch commits.</description>
-      <pubDate>Fri, 20 Feb 2026 15:46:36 GMT</pubDate>
+      <pubDate>Fri, 20 Feb 2026 15:52:14 GMT</pubDate>
       <guid>https://github.com/pocarles/rugbyclaw/commits/main.atom</guid>
     </item>
   </channel>
