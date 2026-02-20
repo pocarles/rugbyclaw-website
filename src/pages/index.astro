@@ -1,5 +1,5 @@
 ---
-// No front matter needed for static HTML conversion
+import { AGENT_DOC_ENDPOINTS } from '../lib/site-meta';
 ---
 
 <!DOCTYPE html>
@@ -16,6 +16,10 @@
     <meta name="author" content="Pierre-Olivier Carles">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://rugbyclaw.com/">
+    <link rel="alternate" type="text/plain" href={AGENT_DOC_ENDPOINTS.llmsIndex} title="RugbyClaw llms.txt">
+    <link rel="alternate" type="text/plain" href={AGENT_DOC_ENDPOINTS.llmsFull} title="RugbyClaw llms-full.txt">
+    <link rel="alternate" type="application/json" href={AGENT_DOC_ENDPOINTS.manifest} title="RugbyClaw agent manifest">
+    <link rel="alternate" type="application/rss+xml" href={AGENT_DOC_ENDPOINTS.updatesFeed} title="RugbyClaw docs updates feed">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -59,7 +63,7 @@
         "description": "Command-line tool to track rugby scores, fixtures, and results with free mode (no API key required), guided onboarding, and OpenClaw automation support.",
         "url": "https://rugbyclaw.com",
         "downloadUrl": "https://www.npmjs.com/package/rugbyclaw",
-        "softwareVersion": "0.1.6",
+        "softwareVersion": "0.1.7",
         "author": {
             "@type": "Person",
             "name": "Pierre-Olivier Carles",

@@ -1,0 +1,44 @@
+# RugbyClaw
+
+> Rugby Union CLI + OpenClaw skill for scores, fixtures, results, and automation-safe output.
+
+Version: 0.1.7
+Last-Updated: 2026-02-20
+
+## Canonical Documentation
+- Docs home: https://rugbyclaw.com/docs/
+- GitHub docs source: https://github.com/pocarles/rugbyclaw/tree/main/docs
+- Changelog: https://github.com/pocarles/rugbyclaw/blob/main/CHANGELOG.md
+- Releases: https://github.com/pocarles/rugbyclaw/releases
+
+## Agent Endpoints
+- llms index: https://rugbyclaw.com/llms.txt
+- llms full: https://rugbyclaw.com/llms-full.txt
+- manifest json: https://rugbyclaw.com/docs/agent.json
+- docs updates feed: https://rugbyclaw.com/docs/updates.xml
+
+## Feeds
+- releases atom: https://github.com/pocarles/rugbyclaw/releases.atom
+- commits atom: https://github.com/pocarles/rugbyclaw/commits/main.atom
+
+## Runtime Contracts
+- Use `--json` for structured output.
+- Use `--agent` for one-line envelopes: ok, exit_code, error_type, data, trace_id.
+
+## Commands
+- rugbyclaw start [--guided|--yes]
+- rugbyclaw config
+- rugbyclaw scores [--json|--agent]
+- rugbyclaw fixtures [league] [--json|--agent]
+- rugbyclaw results [league] [--json|--agent]
+- rugbyclaw team search|next|last <name> [--json|--agent]
+- rugbyclaw calendar <matchId> [--out|--stdout]
+- rugbyclaw doctor [--json|--agent]
+- rugbyclaw status [--json|--agent]
+- rugbyclaw openclaw init [--json|--agent]
+
+## Documentation Standards
+- Keep a Changelog structure for releases.
+- SemVer versioning.
+- Stable URLs for machine-readable docs.
+- GitHub is source of truth for code and release history.

@@ -1,0 +1,89 @@
+{
+  "name": "RugbyClaw",
+  "type": "cli",
+  "version": "0.1.7",
+  "homepage": "https://rugbyclaw.com",
+  "repository": "https://github.com/pocarles/rugbyclaw",
+  "docs_last_updated": "2026-02-20",
+  "docs": {
+    "human": "https://rugbyclaw.com/docs/",
+    "llms": "https://rugbyclaw.com/llms.txt",
+    "llms_full": "https://rugbyclaw.com/llms-full.txt",
+    "updates_feed": "https://rugbyclaw.com/docs/updates.xml",
+    "changelog": "https://github.com/pocarles/rugbyclaw/blob/main/CHANGELOG.md",
+    "release_feed": "https://github.com/pocarles/rugbyclaw/releases.atom",
+    "commit_feed": "https://github.com/pocarles/rugbyclaw/commits/main.atom"
+  },
+  "runtime_contracts": {
+    "json": {
+      "option": "--json",
+      "guarantee": "Machine-readable JSON payload"
+    },
+    "agent": {
+      "option": "--agent",
+      "envelope_fields": [
+        "ok",
+        "exit_code",
+        "error_type",
+        "data",
+        "trace_id"
+      ],
+      "guarantee": "Single-line, automation-safe output contract"
+    }
+  },
+  "global_options": [
+    "--json",
+    "--agent",
+    "--tz <IANA timezone>",
+    "--config <path>",
+    "--quiet"
+  ],
+  "commands": [
+    {
+      "name": "start",
+      "usage": "rugbyclaw start [--guided|--yes]"
+    },
+    {
+      "name": "config",
+      "usage": "rugbyclaw config"
+    },
+    {
+      "name": "scores",
+      "usage": "rugbyclaw scores [--json|--agent]"
+    },
+    {
+      "name": "fixtures",
+      "usage": "rugbyclaw fixtures [league] [--json|--agent]"
+    },
+    {
+      "name": "results",
+      "usage": "rugbyclaw results [league] [--json|--agent]"
+    },
+    {
+      "name": "team",
+      "usage": "rugbyclaw team search|next|last <name> [--json|--agent]"
+    },
+    {
+      "name": "calendar",
+      "usage": "rugbyclaw calendar <matchId> [--out|--stdout]"
+    },
+    {
+      "name": "doctor",
+      "usage": "rugbyclaw doctor [--json|--agent]"
+    },
+    {
+      "name": "status",
+      "usage": "rugbyclaw status [--json|--agent]"
+    },
+    {
+      "name": "openclaw init",
+      "usage": "rugbyclaw openclaw init [--json|--agent]"
+    }
+  ],
+  "standards": {
+    "changelog": "Keep a Changelog",
+    "versioning": "SemVer",
+    "source_of_truth": "GitHub repository + releases"
+  },
+  "generated_at": "2026-02-20T15:46:36.001Z"
+}

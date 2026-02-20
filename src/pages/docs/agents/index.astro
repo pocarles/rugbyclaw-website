@@ -1,0 +1,51 @@
+---
+import DocsLayout from '../../../layouts/DocsLayout.astro';
+import {
+    AGENT_DOC_ENDPOINTS,
+    CLI_VERSION,
+    PROJECT_CHANGELOG_URL,
+    PROJECT_COMMITS_FEED_URL,
+    PROJECT_RELEASES_FEED_URL,
+    PROJECT_RELEASES_URL,
+} from '../../../lib/site-meta';
+---
+
+<DocsLayout
+    title="AI Agents"
+    description="Machine-readable docs, contracts, and feeds for OpenClaw and personal AI agents">
+
+    <p class="lead">If you're building with OpenClaw or any personal AI agent, start here.</p>
+
+    <h2>Machine-Readable Endpoints</h2>
+    <ul>
+        <li><a href={AGENT_DOC_ENDPOINTS.llmsIndex}><code>/llms.txt</code></a> — compact index for agent discovery</li>
+        <li><a href={AGENT_DOC_ENDPOINTS.llmsFull}><code>/llms-full.txt</code></a> — expanded command and contract context</li>
+        <li><a href={AGENT_DOC_ENDPOINTS.manifest}><code>/docs/agent.json</code></a> — structured capability manifest</li>
+        <li><a href={AGENT_DOC_ENDPOINTS.updatesFeed}><code>/docs/updates.xml</code></a> — docs update feed (RSS)</li>
+    </ul>
+
+    <h2>Canonical Change Feeds</h2>
+    <ul>
+        <li><a href={PROJECT_RELEASES_FEED_URL}>GitHub releases feed (Atom)</a></li>
+        <li><a href={PROJECT_COMMITS_FEED_URL}>GitHub commits feed (Atom)</a></li>
+        <li><a href={PROJECT_RELEASES_URL}>Release notes (human view)</a></li>
+        <li><a href={PROJECT_CHANGELOG_URL}>CHANGELOG.md (source of truth)</a></li>
+    </ul>
+
+    <h2>Runtime Output Contracts</h2>
+    <ul>
+        <li><code>--json</code>: machine-readable JSON payloads</li>
+        <li><code>--agent</code>: strict one-line envelope with <code>ok</code>, <code>exit_code</code>, <code>error_type</code>, <code>data</code>, <code>trace_id</code></li>
+        <li><code>--tz &lt;IANA timezone&gt;</code>: deterministic timezone override for automation runs</li>
+    </ul>
+
+    <h2>Versioning & Changelog Policy</h2>
+    <ul>
+        <li>Versioning follows <strong>SemVer</strong>.</li>
+        <li>Release notes follow <strong>Keep a Changelog</strong> sections (Added/Changed/Fixed/Security).</li>
+        <li>New behavior affecting automation contracts must be documented in release notes before publish.</li>
+    </ul>
+
+    <h2>Current Snapshot</h2>
+    <p>Docs snapshot: <strong>v{CLI_VERSION}</strong></p>
+</DocsLayout>

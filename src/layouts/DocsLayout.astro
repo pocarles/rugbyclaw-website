@@ -1,8 +1,12 @@
 ---
-const { title, description } = Astro.props;
+import {
+    AGENT_DOC_ENDPOINTS,
+    CLI_VERSION,
+    PROJECT_CHANGELOG_URL,
+    PROJECT_RELEASES_URL,
+} from '../lib/site-meta';
 
-// Keep in sync with the RugbyClaw npm package version.
-const DOCS_VERSION = "0.1.6";
+const { title, description } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -14,6 +18,10 @@ const DOCS_VERSION = "0.1.6";
     <meta name="description" content={description}>
     <meta name="robots" content="index, follow">
     <link rel="canonical" href={`https://rugbyclaw.com${Astro.url.pathname}`}>
+    <link rel="alternate" type="text/plain" href={AGENT_DOC_ENDPOINTS.llmsIndex} title="RugbyClaw llms.txt">
+    <link rel="alternate" type="text/plain" href={AGENT_DOC_ENDPOINTS.llmsFull} title="RugbyClaw llms-full.txt">
+    <link rel="alternate" type="application/json" href={AGENT_DOC_ENDPOINTS.manifest} title="RugbyClaw agent manifest">
+    <link rel="alternate" type="application/rss+xml" href={AGENT_DOC_ENDPOINTS.updatesFeed} title="RugbyClaw docs updates feed">
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/favicon.png">
@@ -82,7 +90,8 @@ const DOCS_VERSION = "0.1.6";
                 <div class="sidebar-section">
                     <h3>Reference</h3>
                     <a href="https://github.com/pocarles/rugbyclaw/blob/main/docs/reference/leagues.md" target="_blank" rel="noopener">Leagues</a>
-                    <a href="https://github.com/pocarles/rugbyclaw/blob/main/CHANGELOG.md" target="_blank" rel="noopener">Changelog</a>
+                    <a href="/docs/agents/">AI Agents</a>
+                    <a href="/docs/changelog/">Changelog</a>
                     <a href="https://github.com/pocarles/rugbyclaw/blob/main/docs/troubleshooting.md" target="_blank" rel="noopener">Troubleshooting</a>
                 </div>
             </nav>
@@ -93,8 +102,9 @@ const DOCS_VERSION = "0.1.6";
             <article class="prose">
                 <h1>{title}</h1>
                 <p style="margin-top: -0.75rem; margin-bottom: 1.5rem; color: #6b7280; font-size: 0.95rem;">
-                    Docs version: <strong>v{DOCS_VERSION}</strong>
-                    • <a href="https://github.com/pocarles/rugbyclaw/releases" target="_blank" rel="noopener">GitHub Releases</a>
+                    Docs version: <strong>v{CLI_VERSION}</strong>
+                    • <a href={PROJECT_RELEASES_URL} target="_blank" rel="noopener">GitHub Releases</a>
+                    • <a href={PROJECT_CHANGELOG_URL} target="_blank" rel="noopener">CHANGELOG.md</a>
                 </p>
                 <slot />
             </article>

@@ -1,21 +1,31 @@
 ---
 import DocsLayout from "../../../layouts/DocsLayout.astro";
+import {
+  PROJECT_CHANGELOG_URL,
+  PROJECT_RELEASES_FEED_URL,
+  PROJECT_RELEASES_URL,
+  PROJECT_COMMITS_FEED_URL,
+} from "../../../lib/site-meta";
 
 const title = "Changelog";
 const description = "Release notes and changes by version.";
 ---
 
 <DocsLayout title={title} description={description}>
-  <p>
-    The source of truth for releases is GitHub.
-  </p>
+  <p>The source of truth for releases is GitHub.</p>
 
-  <p>
-    → <a href="https://github.com/pocarles/rugbyclaw/releases" target="_blank" rel="noopener">RugbyClaw Releases</a>
-  </p>
+  <h2>Canonical Sources</h2>
+  <ul>
+    <li><a href={PROJECT_RELEASES_URL} target="_blank" rel="noopener">RugbyClaw Releases</a></li>
+    <li><a href={PROJECT_CHANGELOG_URL} target="_blank" rel="noopener">CHANGELOG.md</a></li>
+    <li><a href={PROJECT_RELEASES_FEED_URL} target="_blank" rel="noopener">Releases feed (Atom)</a></li>
+    <li><a href={PROJECT_COMMITS_FEED_URL} target="_blank" rel="noopener">Commits feed (Atom)</a></li>
+  </ul>
 
-  <p>
-    Prefer the raw file?
-    <a href="https://github.com/pocarles/rugbyclaw/blob/main/CHANGELOG.md" target="_blank" rel="noopener">CHANGELOG.md</a>
-  </p>
+  <h2>Documentation Standards</h2>
+  <ul>
+    <li>Release entries follow Keep a Changelog sections: <strong>Added</strong>, <strong>Changed</strong>, <strong>Fixed</strong>, <strong>Security</strong>.</li>
+    <li>Versioning follows <strong>SemVer</strong>.</li>
+    <li>Automation-facing behavior changes are documented before publish.</li>
+  </ul>
 </DocsLayout>
