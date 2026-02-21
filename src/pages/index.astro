@@ -116,7 +116,7 @@ import { AGENT_DOC_ENDPOINTS } from '../lib/site-meta';
                 "name": "What rugby leagues does RugbyClaw support?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "RugbyClaw supports 13+ rugby leagues including Top 14, Pro D2, Premiership, United Rugby Championship (URC), Champions Cup, Challenge Cup, Six Nations, Women's Six Nations, Rugby Championship, Super Rugby Pacific, Currie Cup, NPC, Major League Rugby (MLR), and Rugby World Cup."
+                    "text": "RugbyClaw currently supports 8 rugby competitions: Top 14, Pro D2, Premiership, United Rugby Championship (URC), Super Rugby Pacific, Champions Cup, Challenge Cup, and Six Nations. Additional competitions are planned and marked as Coming Soon."
                 }
             },
             {
@@ -178,7 +178,7 @@ import { AGENT_DOC_ENDPOINTS } from '../lib/site-meta';
             </h1>
             <p class="hero-subtitle">
                 Works out of the box in free mode — no API key required. Track scores, fixtures, and results for Top 14, Premiership, Six Nations,
-                and 10+ more competitions. Includes guided setup, diagnostics, and OpenClaw-ready output.
+                URC, and more competitions coming soon. Includes guided setup, diagnostics, and OpenClaw-ready output.
             </p>
             <div class="hero-cta">
                 <div class="install-command">
@@ -339,13 +339,12 @@ import { AGENT_DOC_ENDPOINTS } from '../lib/site-meta';
             <article class="feature-card">
                 <div class="feature-icon" aria-hidden="true">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M3 3h18v18H3z"/>
-                        <path d="M3 9h18"/>
-                        <path d="M9 21V9"/>
+                        <path d="M9 11l3 3L22 4"/>
+                        <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
                     </svg>
                 </div>
-                <h3>Standings <span class="coming-soon-badge">Coming Soon</span></h3>
-                <p>League tables are planned, but not available in the current CLI release yet.</p>
+                <h3>Smart Next Steps</h3>
+                <p>Each command suggests what to do next (calendar export, team tracking, diagnostics). Disable anytime with <code>--no-followups</code>.</p>
             </article>
         </div>
     </section>
@@ -353,8 +352,8 @@ import { AGENT_DOC_ENDPOINTS } from '../lib/site-meta';
     <!-- Leagues Section -->
     <section id="leagues" class="leagues" aria-labelledby="leagues-heading">
         <div class="section-header">
-            <h2 id="leagues-heading">13 Leagues. One Command.</h2>
-            <p>All the rugby you care about, in one place.</p>
+            <h2 id="leagues-heading">8 Leagues Now. More Coming Soon.</h2>
+            <p>Core competitions are live today. Additional leagues are clearly marked.</p>
         </div>
         <div class="leagues-grid" role="list">
             <div class="league-card" role="listitem"><span class="league-region">France</span><span class="league-name">Top 14</span></div>
@@ -364,13 +363,13 @@ import { AGENT_DOC_ENDPOINTS } from '../lib/site-meta';
             <div class="league-card" role="listitem"><span class="league-region">Europe</span><span class="league-name">Champions Cup</span></div>
             <div class="league-card" role="listitem"><span class="league-region">Europe</span><span class="league-name">Challenge Cup</span></div>
             <div class="league-card" role="listitem"><span class="league-region">Europe</span><span class="league-name">Six Nations</span></div>
-            <div class="league-card" role="listitem"><span class="league-region">Europe</span><span class="league-name">Women's 6N</span></div>
-            <div class="league-card" role="listitem"><span class="league-region">Southern</span><span class="league-name">Rugby Champ</span></div>
             <div class="league-card" role="listitem"><span class="league-region">Pacific</span><span class="league-name">Super Rugby</span></div>
-            <div class="league-card" role="listitem"><span class="league-region">South Africa</span><span class="league-name">Currie Cup</span></div>
-            <div class="league-card" role="listitem"><span class="league-region">New Zealand</span><span class="league-name">NPC</span></div>
-            <div class="league-card" role="listitem"><span class="league-region">USA</span><span class="league-name">MLR</span></div>
-            <div class="league-card highlight" role="listitem"><span class="league-region">World</span><span class="league-name">World Cup</span></div>
+            <div class="league-card coming-soon" role="listitem"><span class="league-region">Europe</span><span class="league-name">Women's 6N</span><span class="league-status">Coming Soon</span></div>
+            <div class="league-card coming-soon" role="listitem"><span class="league-region">Southern</span><span class="league-name">Rugby Champ</span><span class="league-status">Coming Soon</span></div>
+            <div class="league-card coming-soon" role="listitem"><span class="league-region">South Africa</span><span class="league-name">Currie Cup</span><span class="league-status">Coming Soon</span></div>
+            <div class="league-card coming-soon" role="listitem"><span class="league-region">New Zealand</span><span class="league-name">NPC</span><span class="league-status">Coming Soon</span></div>
+            <div class="league-card coming-soon" role="listitem"><span class="league-region">USA</span><span class="league-name">MLR</span><span class="league-status">Coming Soon</span></div>
+            <div class="league-card highlight coming-soon" role="listitem"><span class="league-region">World</span><span class="league-name">World Cup</span><span class="league-status">Coming Soon</span></div>
         </div>
     </section>
 

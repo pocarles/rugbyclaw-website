@@ -556,6 +556,7 @@ section {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
     background: var(--bg-light);
     border: 1px solid var(--border);
     border-radius: 10px;
@@ -581,6 +582,40 @@ section {
 
 .league-card.highlight .league-name {
     color: white;
+}
+
+.league-card.coming-soon {
+    background: #f3f4f6;
+    border-color: #d1d5db;
+    opacity: 0.88;
+}
+
+.league-card.coming-soon:hover {
+    border-color: #9ca3af;
+    background: #e5e7eb;
+}
+
+.league-card.highlight.coming-soon {
+    background: #e5e7eb;
+    border-color: #9ca3af;
+}
+
+.league-card.highlight.coming-soon .league-region,
+.league-card.highlight.coming-soon .league-name {
+    color: var(--text-secondary);
+}
+
+.league-status {
+    margin-top: 0.4rem;
+    padding: 0.1rem 0.45rem;
+    border-radius: 999px;
+    font-size: 0.58rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-weight: 700;
+    color: #92400e;
+    background: #fef3c7;
+    border: 1px solid #fde68a;
 }
 
 .league-region {
@@ -779,6 +814,20 @@ section {
     background: #FEF3C7;
     border: 1px solid #FDE68A;
     text-transform: uppercase;
+}
+
+.coming-soon-doc {
+    display: inline-block;
+    margin-left: 0.4rem;
+    padding: 0.1rem 0.4rem;
+    border-radius: 999px;
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: #92400E;
+    background: #FEF3C7;
+    border: 1px solid #FDE68A;
+    text-transform: uppercase;
+    vertical-align: middle;
 }
 
 .commands-tip {

@@ -7,6 +7,8 @@ import DocsLayout from '../../../layouts/DocsLayout.astro';
     description="All rugby competitions supported by RugbyClaw">
     
     <p class="lead">8 rugby competitions supported by RugbyClaw</p>
+    <p>In free mode (no API key), default leagues are <strong>Top 14</strong>, <strong>Premiership</strong>, <strong>URC</strong>, <strong>Champions Cup</strong>, and <strong>Six Nations</strong>.</p>
+    <p>Add your own API key in <code>rugbyclaw config</code> to unlock all currently supported leagues listed below.</p>
 
     <h2>Club Competitions</h2>
 
@@ -78,6 +80,16 @@ import DocsLayout from '../../../layouts/DocsLayout.astro';
         <li><strong>Format:</strong> Annual international tournament</li>
     </ul>
 
+    <h2>Coming Soon Leagues</h2>
+    <ul>
+        <li>Women's Six Nations <span class="coming-soon-doc">Coming Soon</span></li>
+        <li>Rugby Championship <span class="coming-soon-doc">Coming Soon</span></li>
+        <li>Currie Cup <span class="coming-soon-doc">Coming Soon</span></li>
+        <li>NPC <span class="coming-soon-doc">Coming Soon</span></li>
+        <li>MLR <span class="coming-soon-doc">Coming Soon</span></li>
+        <li>Rugby World Cup <span class="coming-soon-doc">Coming Soon</span></li>
+    </ul>
+
     <h2>Usage</h2>
     <p>Use league slugs in commands:</p>
     
@@ -100,6 +112,7 @@ rugbyclaw fixtures six_nations</code></pre>
 
     <h2>Notes</h2>
     <ul>
+        <li>Only leagues listed in the supported sections are available in current CLI commands</li>
         <li>All times shown in your configured timezone</li>
         <li>Data powered by API-Sports Rugby API</li>
         <li>Coverage: Rugby Union only (no Rugby League)</li>

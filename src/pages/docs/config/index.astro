@@ -24,7 +24,7 @@ import DocsLayout from '../../../layouts/DocsLayout.astro';
     <p>The wizard will guide you through:</p>
     <ol>
         <li>API key setup (or skip to use proxy mode)</li>
-        <li>Favorite leagues selection</li>
+        <li>Favorite leagues selection (from currently supported leagues)</li>
         <li>Timezone selection</li>
         <li>Favorite team (optional)</li>
     </ol>
@@ -41,9 +41,10 @@ import DocsLayout from '../../../layouts/DocsLayout.astro';
     <p><strong>Free tier includes:</strong></p>
     <ul>
         <li>100 requests per day</li>
-        <li>All leagues</li>
+        <li>All currently supported RugbyClaw leagues (8 total)</li>
         <li>No credit card required</li>
     </ul>
+    <p>Some leagues on the website are marked <strong>Coming Soon</strong> and are not selectable yet in CLI commands.</p>
 
     <h2>Config File Location</h2>
     <p><code>~/.config/rugbyclaw/config.json</code></p>
