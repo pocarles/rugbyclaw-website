@@ -1,5 +1,5 @@
 export const SITE_URL = 'https://rugbyclaw.com';
-export const CLI_VERSION = '0.1.10';
+export const CLI_VERSION = '0.1.11';
 export const DOCS_LAST_UPDATED = '2026-02-21';
 
 export const PROJECT_REPO_URL = 'https://github.com/pocarles/rugbyclaw';
