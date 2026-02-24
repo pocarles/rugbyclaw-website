@@ -1,0 +1,26 @@
+---
+import DocsLayout from "../../../layouts/DocsLayout.astro";
+
+const title = "Release: Market Pulse (Polymarket probabilities)";
+const description = "Confidence-gated Polymarket implied probabilities for rugby fixtures inside RugbyClaw.";
+---
+
+<DocsLayout title={title} description={description}>
+    <p class="lead">Market Pulse brings Polymarket implied probabilities into RugbyClaw with a read-only, confidence-gated CLI flow.</p>
+
+    <h2>Highlights</h2>
+    <ul>
+        <li>New <code>rugbyclaw market-pulse</code> command for implied win probabilities.</li>
+        <li>Confidence gating hides low-confidence projections unless you opt in with <code>--include-low-confidence</code>.</li>
+        <li>Read-only and informational output designed for match context, not wagering.</li>
+        <li>Supports match lookup by id or by home/away teams with league and date filters.</li>
+        <li>Machine-friendly <code>--json</code> output plus <code>--agent</code> mode for workflows.</li>
+    </ul>
+
+    <h2>Example usage</h2>
+    <pre><code>rugbyclaw market-pulse --match-id 12345
+rugbyclaw market-pulse --home toulouse --away "stade rochelais" --league top14 --date 2024-05-18
+rugbyclaw market-pulse --league premiership --date 2024-05-18 --json</code></pre>
+
+    <p><strong>Confidence note:</strong> Outputs below the confidence threshold are hidden by default. Add <code>--include-low-confidence</code> to review them explicitly.</p>
+</DocsLayout>

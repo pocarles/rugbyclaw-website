@@ -37,11 +37,26 @@ rugbyclaw team "stade toulousain" last</code></pre>
     <h3><a href="https://github.com/pocarles/rugbyclaw/blob/main/docs/commands/doctor.md" target="_blank" rel="noopener">rugbyclaw doctor</a></h3>
     <p>Diagnose proxy/API/config issues with clear checks for onboarding and support.</p>
     
-    <h3><a href="https://github.com/pocarles/rugbyclaw/blob/main/docs/commands/calendar.md" target="_blank" rel="noopener">rugbyclaw calendar &lt;matchId&gt;</a></h3>
+    <h3><a href="/docs/commands/calendar/">rugbyclaw calendar &lt;matchId&gt;</a></h3>
     <p>Export matches to your calendar in ICS format.</p>
 
     <h3><a href="https://github.com/pocarles/rugbyclaw/blob/main/docs/commands/status.md" target="_blank" rel="noopener">rugbyclaw status</a></h3>
     <p>See current mode, timezone, and active leagues in one command.</p>
+
+    <h2>Market Pulse (Polymarket probabilities)</h2>
+    <p>Surface implied win probabilities for rugby fixtures via Polymarket. The command is read-only, informational-only, and confidence-gated (low-confidence projections stay hidden unless you opt in).</p>
+
+    <h3>Lookup by match id</h3>
+    <pre><code>rugbyclaw market-pulse --match-id 12345</code></pre>
+
+    <h3>Lookup by teams, league, and date</h3>
+    <pre><code>rugbyclaw market-pulse --home toulouse --away "stade rochelais" --league top14 --date 2024-05-18</code></pre>
+
+    <h3>JSON and agent modes</h3>
+    <pre><code>rugbyclaw market-pulse --league premiership --date 2024-05-18 --json
+rugbyclaw market-pulse --league premiership --date 2024-05-18 --agent</code></pre>
+
+    <p><strong>Note:</strong> Low-confidence output is hidden by default. Use <code>--include-low-confidence</code> to reveal gated probabilities when you need them.</p>
 
     <h2>Coming Soon</h2>
     <ul>
