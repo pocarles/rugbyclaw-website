@@ -268,43 +268,6 @@ import { AGENT_DOC_ENDPOINTS } from '../lib/site-meta';
         </div>
     </section>
 
-    <!-- Market Pulse -->
-    <section id="market-pulse" class="features" aria-labelledby="market-pulse-heading">
-        <div class="section-header">
-            <h2 id="market-pulse-heading">Market Pulse: Polymarket insights</h2>
-            <p>Implied probabilities for rugby fixtures — read-only, informational, and confidence-gated.</p>
-        </div>
-        <div class="features-grid">
-            <article class="feature-card">
-                <div class="feature-icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <path d="M2 12h4l3-8 4 16 3-8h6"></path>
-                    </svg>
-                </div>
-                <h3>Confidence-gated probabilities</h3>
-                <p>Pulls Polymarket implied win probabilities for rugby matches. Low-confidence projections stay hidden unless you explicitly include them.</p>
-                <p class="install-note">Read-only & informational — no wagering, just market-derived signal for match context.</p>
-            </article>
-            <article class="feature-card">
-                <div class="feature-icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <rect x="3" y="4" width="18" height="16" rx="2"></rect>
-                        <path d="M7 9h10"></path>
-                        <path d="M7 13h6"></path>
-                    </svg>
-                </div>
-                <h3>Try it from the CLI</h3>
-                <p>Request probabilities for a fixture by league and date, then opt-in to see low-confidence results if needed.</p>
-                <div class="code-block">
-                    <code>rugbyclaw market-pulse --league top14 --date 2024-05-18</code>
-                    <button class="copy-btn" onclick="copyCode(this)" aria-label="Copy command">Copy</button>
-                </div>
-                <p class="commands-tip">Add <code>--include-low-confidence</code> to reveal gated outputs.</p>
-            </article>
-        </div>
-    </section>
-
     <!-- Features Section -->
     <section id="features" class="features" aria-labelledby="features-heading">
         <div class="section-header">
@@ -372,6 +335,16 @@ import { AGENT_DOC_ENDPOINTS } from '../lib/site-meta';
                 </div>
                 <h3>Automation-Ready</h3>
                 <p>Use <code>--json</code> or strict <code>--agent</code> envelope output for OpenClaw and scripted workflows.</p>
+            </article>
+            <article class="feature-card">
+                <div class="feature-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M2 12h4l3-8 4 16 3-8h6"></path>
+                    </svg>
+                </div>
+                <h3>Rugby Pulse</h3>
+                <p>Read-only Polymarket implied probabilities for match context, with confidence gating by default. Reveal low-confidence projections only when you explicitly opt in.</p>
             </article>
             <article class="feature-card">
                 <div class="feature-icon" aria-hidden="true">
