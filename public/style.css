@@ -41,6 +41,9 @@ body {
     background: var(--bg-white);
     color: var(--text-primary);
     line-height: 1.6;
+    min-height: 100vh;
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
 }
 
 a {
@@ -61,6 +64,11 @@ h1, h2, h3 {
 
 code {
     font-family: var(--font-mono);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 /* Logo Mark */
@@ -87,15 +95,15 @@ code {
 
 .logo-image {
     display: block;
-    width: 162px;
-    height: 60px;
+    width: clamp(128px, 16vw, 162px);
+    height: auto;
     object-fit: contain;
 }
 
 .logo-image.small {
     display: block;
-    width: 108px;
-    height: 40px;
+    width: clamp(96px, 12vw, 108px);
+    height: auto;
     object-fit: contain;
 }
 
@@ -109,15 +117,19 @@ code {
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border);
     z-index: 100;
+    padding-top: env(safe-area-inset-top);
 }
 
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1rem 2rem;
+    padding-block: 0.75rem;
+    padding-inline: clamp(1rem, 3vw, 2rem);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .logo {
@@ -132,17 +144,25 @@ code {
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 2.5rem;
+    gap: clamp(1rem, 2vw, 2rem);
+    row-gap: 0.75rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    flex: 1 1 320px;
+    min-width: 0;
 }
 
 .nav-links a {
     color: var(--text-secondary);
     font-weight: 500;
-    font-size: 0.95rem;
+    font-size: clamp(0.9rem, 1.2vw, 0.95rem);
+    padding: 0.35rem 0.4rem;
+    border-radius: 6px;
 }
 
 .nav-links a:hover {
     color: var(--text-dark);
+    background: var(--bg-light);
 }
 
 .nav-social {
@@ -198,10 +218,10 @@ code {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    gap: 6rem;
+    gap: clamp(3rem, 5vw, 6rem);
     max-width: 1400px;
     margin: 0 auto;
-    padding: 10rem 4rem 6rem;
+    padding: 10rem clamp(1.5rem, 4vw, 4rem) 6rem;
 }
 
 .hero-badge {
@@ -243,6 +263,7 @@ code {
     flex-wrap: wrap;
     align-items: center;
     gap: 1.25rem;
+    max-width: 560px;
 }
 
 .install-command {
@@ -252,12 +273,17 @@ code {
     border: 1px solid var(--border);
     border-radius: 8px;
     padding: 0.75rem 1rem;
-    gap: 1rem;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 .install-command code {
     font-size: 0.95rem;
     color: var(--text-dark);
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: anywhere;
 }
 
 .install-command .copy-btn {
@@ -278,6 +304,10 @@ code {
 /* Terminal */
 .hero-visual {
     position: relative;
+    width: 100%;
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .terminal {
@@ -285,6 +315,7 @@ code {
     border-radius: 12px;
     box-shadow: var(--shadow-xl);
     overflow: hidden;
+    max-width: 100%;
 }
 
 .terminal-header {
@@ -340,7 +371,7 @@ code {
 /* OpenClaw Section */
 .openclaw-section {
     background: linear-gradient(180deg, var(--accent-bg) 0%, var(--bg-white) 100%);
-    padding: 6rem 2rem 7rem;
+    padding: clamp(4.5rem, 7vw, 6rem) clamp(1.25rem, 4vw, 2rem) 7rem;
     text-align: center;
 }
 
@@ -406,14 +437,17 @@ code {
 }
 
 .openclaw-install .code-block {
-    display: inline-flex;
+    display: flex;
     background: var(--bg-white);
     box-shadow: var(--shadow-md);
+    margin: 0 auto;
+    max-width: 560px;
+    width: 100%;
 }
 
 .openclaw-examples {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 1.25rem;
     margin-bottom: 2.5rem;
 }
@@ -450,13 +484,13 @@ code {
 
 /* Sections */
 section {
-    padding: 7rem 2rem;
+    padding: clamp(4.5rem, 7vw, 7rem) clamp(1.25rem, 4vw, 2.5rem);
 }
 
 .section-header {
     text-align: center;
-    max-width: 600px;
-    margin: 0 auto 5rem;
+    max-width: 720px;
+    margin: 0 auto clamp(3rem, 6vw, 5rem);
 }
 
 .section-header h2 {
@@ -467,6 +501,7 @@ section {
 .section-header p {
     font-size: 1.125rem;
     color: var(--text-secondary);
+    margin: 0 auto;
 }
 
 /* Features */
@@ -476,7 +511,7 @@ section {
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 2rem;
     max-width: 1100px;
     margin: 0 auto;
@@ -547,7 +582,7 @@ section {
 
 .leagues-grid {
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: 1rem;
 }
 
@@ -640,7 +675,7 @@ section {
 
 .personality-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 2rem;
     max-width: 1000px;
     margin: 0 auto;
@@ -695,7 +730,7 @@ section {
 
 .install-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 2rem;
     margin-bottom: 4rem;
 }
@@ -740,11 +775,17 @@ section {
     border: 1px solid var(--border);
     border-radius: 8px;
     padding: 0.875rem 1rem;
+    gap: 0.75rem;
+    flex-wrap: wrap;
 }
 
 .code-block code {
     font-size: 0.9rem;
     color: var(--text-dark);
+    flex: 1;
+    min-width: 0;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
 }
 
 .code-block .copy-btn {
@@ -778,11 +819,11 @@ section {
 
 .command-item {
     display: grid;
-    grid-template-columns: 260px 1fr;
+    grid-template-columns: minmax(0, 260px) minmax(0, 1fr);
     padding: 1.125rem 1.75rem;
     border-bottom: 1px solid var(--border);
-    align-items: center;
-    gap: 2rem;
+    align-items: start;
+    gap: 1.5rem;
 }
 
 .command-item:last-child {
@@ -796,6 +837,10 @@ section {
     font-size: 0.85rem;
     color: var(--accent);
     border: 1px solid var(--border);
+    display: inline-block;
+    width: 100%;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
 }
 
 .command-item span {
@@ -870,7 +915,10 @@ section {
 
 .footer-links {
     display: flex;
-    gap: 2.5rem;
+    gap: 1.5rem 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
 }
 
 .footer-links a {
@@ -932,12 +980,18 @@ section {
 }
 
 @media (max-width: 768px) {
-    .nav-links {
-        gap: 1.25rem;
+    .nav-container {
+        align-items: flex-start;
     }
     
-    .nav-links a:not(.btn):not(.nav-social) {
-        display: none;
+    .nav-links {
+        gap: 0.75rem 1rem;
+        width: 100%;
+        justify-content: flex-start;
+    }
+    
+    .nav-links .btn {
+        padding: 0.65rem 1rem;
     }
     
     .hero h1 {
@@ -977,5 +1031,41 @@ section {
     
     .leagues-grid {
         grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .nav-container {
+        padding-block: 0.65rem;
+    }
+    
+    .nav-links {
+        gap: 0.5rem 0.75rem;
+    }
+    
+    .nav-links .btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .hero {
+        padding: 7rem 1.25rem 4.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.98rem;
+    }
+    
+    .install-command,
+    .code-block {
+        align-items: flex-start;
+    }
+    
+    .command-item {
+        padding: 1rem 1.25rem;
+    }
+    
+    .footer {
+        padding: clamp(3rem, 8vw, 4rem) clamp(1rem, 5vw, 2rem);
     }
 }
