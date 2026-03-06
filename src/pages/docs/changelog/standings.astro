@@ -1,0 +1,47 @@
+---
+import DocsLayout from "../../../layouts/DocsLayout.astro";
+
+const title = "v0.2.0 — Standings & Data Cascade";
+const description = "League tables, web scrapers, priority cascade, and 14 bug fixes.";
+---
+
+<DocsLayout title={title} description={description}>
+  <p class="lead">RugbyClaw v0.2.0 adds league standings with a multi-source data cascade for the most accurate tables possible.</p>
+
+  <h2>New: rugbyclaw standings</h2>
+  <pre><code>rugbyclaw standings top14
+rugbyclaw standings premiership --json
+rugbyclaw standings urc --agent</code></pre>
+  <p>View league tables with positions, W/D/L, points for/against, bonus points, try stats, and form strings. Works for all 8 supported leagues.</p>
+
+  <h2>Multi-Source Data Cascade</h2>
+  <p>Standings pulls data from the most accurate source available, falling back automatically:</p>
+  <ol>
+    <li><strong>Official league scrapers</strong> — premiershiprugby.com and stats.unitedrugby.com</li>
+    <li><strong>all.rugby</strong> — universal aggregator covering all leagues</li>
+    <li><strong>API-Sports</strong> — structured API fallback</li>
+    <li><strong>ESPN enrichment</strong> — bonus point data when season matches</li>
+  </ol>
+
+  <h2>Bug Fixes (14)</h2>
+  <ul>
+    <li>Silent failure masking — errors now surface instead of showing empty results</li>
+    <li>Cache concurrency safety with write queue and atomic index updates</li>
+    <li>Path traversal prevention in ICS calendar file generation</li>
+    <li>Terminal control-sequence injection protection on all rendered strings</li>
+    <li>Config loader now throws on file corruption instead of silent fallback</li>
+    <li>Date validation rejects impossible dates</li>
+    <li>Notify output type correctly labels combined mode</li>
+    <li>Cache keys include provider mode to prevent cross-contamination</li>
+    <li>Follow-up hint CLI syntax corrected</li>
+    <li>And more — see <a href="https://github.com/pocarles/rugbyclaw/blob/main/CHANGELOG.md">full changelog on GitHub</a></li>
+  </ul>
+
+  <h2>Test Coverage</h2>
+  <p>108 tests across 36 test files, all passing. 8 new test files added covering cache keys, config loaders, provider failure signaling, notify contracts, and scraper parsing.</p>
+
+  <h2>Install / Update</h2>
+  <pre><code>npm install -g rugbyclaw@latest</code></pre>
+
+  <p><a href="/docs/commands/standings/">Standings command docs →</a></p>
+</DocsLayout>

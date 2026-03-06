@@ -6,15 +6,12 @@ import DocsLayout from '../../../../layouts/DocsLayout.astro';
     title="rugbyclaw standings" 
     description="View league tables and standings">
     
-    <p class="lead"><strong>Coming Soon</strong> — this command is planned but not available in the current release.</p>
+    <p class="lead">View league tables with full standings data — positions, wins, draws, losses, points, bonus points, try stats, and form.</p>
 
-    <h2>Planned Usage</h2>
+    <h2>Usage</h2>
     <pre><code>rugbyclaw standings [league] [options]</code></pre>
 
-    <h2>Status</h2>
-    <p>RugbyClaw does <strong>not</strong> support <code>rugbyclaw standings</code> yet. We keep this page to make the roadmap explicit and avoid misleading users.</p>
-
-    <h2>Planned Examples</h2>
+    <h2>Examples</h2>
     
     <h3>Top 14 table</h3>
     <pre><code>rugbyclaw standings top14</code></pre>
@@ -22,10 +19,13 @@ import DocsLayout from '../../../../layouts/DocsLayout.astro';
     <h3>Premiership table</h3>
     <pre><code>rugbyclaw standings premiership</code></pre>
 
+    <h3>All favorite leagues</h3>
+    <pre><code>rugbyclaw standings</code></pre>
+
     <h3>JSON output</h3>
     <pre><code>rugbyclaw standings top14 --json</code></pre>
 
-    <h2>Planned Options</h2>
+    <h2>Options</h2>
     <table>
         <thead>
             <tr>
@@ -40,30 +40,44 @@ import DocsLayout from '../../../../layouts/DocsLayout.astro';
                 <td>Output as JSON</td>
                 <td>false</td>
             </tr>
+            <tr>
+                <td><code>--agent</code></td>
+                <td>Agent envelope output</td>
+                <td>false</td>
+            </tr>
+            <tr>
+                <td><code>--no-followups</code></td>
+                <td>Suppress follow-up hints</td>
+                <td>false</td>
+            </tr>
         </tbody>
     </table>
 
-    <h2>Planned Output</h2>
+    <h2>Output</h2>
+    <p>Each team entry includes:</p>
     <ul>
-        <li>Team position</li>
-        <li>Games played</li>
-        <li>Wins, draws, losses</li>
-        <li>Points for/against</li>
-        <li>Point differential</li>
-        <li>Total points</li>
+        <li><strong>Position</strong> — league ranking</li>
+        <li><strong>P, W, D, L</strong> — played, won, drawn, lost</li>
+        <li><strong>PF, PA, PD</strong> — points for, against, differential</li>
+        <li><strong>BP</strong> — bonus points (try bonus + losing bonus when available)</li>
+        <li><strong>Pts</strong> — total league points</li>
+        <li><strong>Form</strong> — recent results (W/L/D)</li>
     </ul>
+    <p>Playoff and relegation zones are highlighted in terminal output.</p>
 
-    <h2>What works today</h2>
-    <ul>
-        <li><a href="/docs/commands/fixtures/">rugbyclaw fixtures</a> for upcoming matches</li>
-        <li><a href="/docs/commands/results/">rugbyclaw results</a> for recent outcomes</li>
-        <li><a href="/docs/commands/team/">rugbyclaw team</a> for team-specific follow-up</li>
-    </ul>
+    <h2>Data Sources</h2>
+    <p>Standings uses a priority cascade for the most accurate data:</p>
+    <ol>
+        <li><strong>Official league scrapers</strong> — premiershiprugby.com, stats.unitedrugby.com</li>
+        <li><strong>all.rugby</strong> — universal aggregator covering all leagues</li>
+        <li><strong>API-Sports</strong> — structured API fallback</li>
+        <li><strong>ESPN</strong> — bonus point enrichment (when season matches)</li>
+    </ol>
 
     <h2>Related Commands</h2>
     <ul>
-        <li><a href="/docs/commands/fixtures/">rugbyclaw fixtures</a> - Upcoming matches</li>
-        <li><a href="/docs/commands/results/">rugbyclaw results</a> - Recent results</li>
-        <li><a href="/docs/leagues/">Supported leagues</a> - League reference</li>
+        <li><a href="/docs/commands/fixtures/">rugbyclaw fixtures</a> — Upcoming matches</li>
+        <li><a href="/docs/commands/results/">rugbyclaw results</a> — Recent results</li>
+        <li><a href="/docs/leagues/">Supported leagues</a> — League reference</li>
     </ul>
 </DocsLayout>
