@@ -66,13 +66,11 @@ import DocsLayout from '../../../../layouts/DocsLayout.astro';
     <p>Playoff and relegation zones are highlighted in terminal output.</p>
 
     <h2>Data Sources</h2>
-    <p>Standings uses a priority cascade for the most accurate data:</p>
-    <ol>
-        <li><strong>Official league scrapers</strong> — premiershiprugby.com, stats.unitedrugby.com</li>
-        <li><strong>all.rugby</strong> — universal aggregator covering all leagues</li>
-        <li><strong>API-Sports</strong> — structured API fallback</li>
-        <li><strong>ESPN</strong> — bonus point enrichment (when season matches)</li>
-    </ol>
+    <p>Standings data comes from API-Sports as the primary source, with optional ESPN enrichment:</p>
+    <ul>
+        <li><strong>API-Sports</strong> — primary data source (paid API, full coverage)</li>
+        <li><strong>ESPN</strong> — optional bonus point enrichment (silent fallback if unavailable)</li>
+    </ul>
 
     <h2>Related Commands</h2>
     <ul>

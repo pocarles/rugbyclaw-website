@@ -1,0 +1,42 @@
+---
+import DocsLayout from "../../../layouts/DocsLayout.astro";
+
+const title = "v0.2.2 — Security Hardening & Scraper Cleanup";
+const description = "Removed brittle HTML scrapers, fixed 3 security issues, 3 bug fixes.";
+---
+
+<DocsLayout title={title} description={description}>
+  <p class="lead">RugbyClaw v0.2.2 strips ~15,000 lines of fragile HTML scraping code and hardens the codebase with 6 targeted fixes.</p>
+
+  <h2>Changed</h2>
+  <ul>
+    <li><strong>API-Sports is now the sole required data source for standings.</strong> The scraper cascade (all.rugby, premiershiprugby.com, stats.unitedrugby.com) has been completely removed. ESPN enrichment remains as a silent, optional layer for bonus point data.</li>
+    <li>Config and state files are now written with owner-only permissions (<code>0o600</code>), matching secrets.json.</li>
+  </ul>
+
+  <h2>Security</h2>
+  <ul>
+    <li><strong>SSRF protection</strong> — <code>RUGBYCLAW_PROXY_URL</code> now validates HTTPS and blocks private/internal hosts (169.254.x, 10.x, 192.168.x, localhost, .internal, .local).</li>
+    <li><strong>Cache path traversal fix</strong> — cache filenames are validated against a strict hex pattern before any filesystem operation. A corrupted index can no longer read or delete files outside the cache directory.</li>
+    <li><strong>EPCR season fix</strong> — Champions Cup and Challenge Cup no longer return stale previous-season data during January–June. Season fallback logic now tries the current season first.</li>
+  </ul>
+
+  <h2>Fixed</h2>
+  <ul>
+    <li><code>--limit</code> with non-numeric values now shows a clear error instead of silently returning empty output.</li>
+    <li>API error responses with nested objects now render as readable JSON instead of <code>[object Object]</code>.</li>
+  </ul>
+
+  <h2>Removed</h2>
+  <ul>
+    <li>3 HTML scraper providers: allrugby-standings, prem-standings, urc-standings</li>
+    <li>10 HTML test fixture snapshots</li>
+    <li>2 scraper-only test files</li>
+  </ul>
+
+  <h2>Stats</h2>
+  <p>+239 lines / −15,318 lines. 103 tests passing across 35 test files.</p>
+
+  <h2>Install / Update</h2>
+  <pre><code>npm install -g rugbyclaw@latest</code></pre>
+</DocsLayout>
